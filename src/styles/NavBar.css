@@ -1,0 +1,32 @@
+/* Styles pour la barre de navigation */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navList {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navItem {
+    margin: 0 15px;
+  }
+  
+  .navLink {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .navLink:hover {
+    color: #ccc; /* Ajouter un effet de hover sur le lien */
+  }
+  
