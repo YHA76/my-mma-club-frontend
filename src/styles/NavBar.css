@@ -1,32 +1,42 @@
-/* Styles pour la barre de navigation */
 .navbar {
-    background-color: #333;
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-  .navList {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navItem {
-    margin: 0 15px;
-  }
-  
-  .navLink {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .navLink:hover {
-    color: #ccc; /* Ajouter un effet de hover sur le lien */
-  }
-  
+  background-color: #333;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navList {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin: 0 20px; 
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-size: 20px; 
+  padding: 15px 20px; 
+  transition: all 0.3s ease;
+}
+
+.navLink:hover {
+  color: black; 
+  background-color: red;
+  font-size: 22px; 
+  border-radius: 5px;
+}
+
+.navLink.active {  
+  background-color: red;
+  font-size: 22px; 
+  border-radius: 5px;
+  color: black; 
+}

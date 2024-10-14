@@ -1,51 +1,56 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import '../styles/NavBar.css'; // Importation du fichier CSS
+import { NavLink } from 'react-router-dom'; // Utilisation de NavLink
+import '../styles/NavBar.css'; 
 
 function Navbar() {
   return (
     <nav className="navbar">
       <ul className="navList">
         <li className="navItem">
-          <motion.div
-            whileHover={{ scale: 1.2, rotate: 15 }}
-            whileTap={{ scale: 0.8, rotate: -15, borderRadius: "100%" }}
+          <NavLink 
+            to="/" 
+            className="navLink"
+            activeClassName="active"
+            exact
           >
-            <Link to="/" className="navLink">Accueil</Link>
-          </motion.div>
+            Accueil
+          </NavLink>
         </li>
         <li className="navItem">
-          <motion.div
-            whileHover={{ scale: 1.2, rotate: 15 }}
-            whileTap={{ scale: 0.8, rotate: -15, borderRadius: "100%" }}
+          <NavLink 
+            to="/about" 
+            className="navLink"
+            activeClassName="active"
           >
-            <Link to="/about" className="navLink">Qui nous sommes</Link>
-          </motion.div>
+            Qui nous sommes
+          </NavLink>
         </li>
         <li className="navItem">
-          <motion.div
-            whileHover={{ scale: 1.2, rotate: 15 }}
-            whileTap={{ scale: 0.8, rotate: -15, borderRadius: "100%" }}
+          <NavLink 
+            to="/seances" 
+            className="navLink"
+            activeClassName="active"
           >
-            <Link to="/seances" className="navLink">Séances</Link>
-          </motion.div>
+            Séances
+          </NavLink>
         </li>
         <li className="navItem">
-          <motion.div
-            whileHover={{ scale: 1.2, rotate: 15 }}
-            whileTap={{ scale: 0.8, rotate: -15, borderRadius: "100%" }}
+          <NavLink 
+            to="/programmes" 
+            className="navLink"
+            activeClassName="active"
           >
-            <Link to="/programmes" className="navLink">Programmes</Link>
-          </motion.div>
+            Programmes
+          </NavLink>
         </li>
         <li className="navItem">
-          <motion.div
-            whileHover={{ scale: 1.2, rotate: 15 }}
-            whileTap={{ scale: 0.8, rotate: -15, borderRadius: "100%" }}
+          <NavLink 
+            to="/inscrire" 
+            className="navLink"
+            activeClassName="active"
           >
-            <Link to="/inscrire" className="navLink">S'inscrire</Link>
-          </motion.div>
+            S'inscrire
+          </NavLink>
         </li>
       </ul>
     </nav>
