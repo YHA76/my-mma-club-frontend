@@ -6,7 +6,7 @@ function Inscrire() {
   return (
     <div>
             <Navbar />
-            <div style={{ paddingTop: '90px' }}> {/* Pour éviter le chevauchement avec la navbar */}
+            <div style={{ paddingTop: '90px' }}>
       <h1>S'inscrire</h1>
       <p>Inscrivez-vous à notre club de MMA.</p>
     </div>

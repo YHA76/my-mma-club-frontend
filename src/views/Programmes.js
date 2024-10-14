@@ -6,7 +6,7 @@ function Programmes() {
   return (
     <div>
             <Navbar />
-            <div style={{ paddingTop: '90px' }}> {/* Pour éviter le chevauchement avec la navbar */}
+            <div style={{ paddingTop: '90px' }}>
       <h1>Programmes</h1>
       <p>Découvrez nos programmes d'entraînement ici.</p>
     </div>

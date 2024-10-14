@@ -5,7 +5,7 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <div style={{ paddingTop: '90px' }}> {/* Pour éviter le chevauchement avec la navbar */}
+      <div style={{ paddingTop: '90px' }}>
         <h1>Bienvenue sur la page d'accueil du club de MMA !</h1>
         <p>C'est la première page de ton application React.</p>
       </div>

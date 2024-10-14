@@ -6,7 +6,7 @@ function Seances() {
   return (
     <div>
             <Navbar />
-            <div style={{ paddingTop: '90px' }}> {/* Pour éviter le chevauchement avec la navbar */}
+            <div style={{ paddingTop: '90px' }}>
       <h1>Séances</h1>
       <p>Découvrez nos séances ici.</p>
     </div>
