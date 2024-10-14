@@ -1,6 +1,6 @@
 .navbar {
   background-color: #333;
-  padding: 15px 0; /* Plus d'espace en haut et en bas */
+  padding: 15px 0;
   position: fixed;
   top: 0;
   width: 100%;
@@ -16,27 +16,27 @@
 }
 
 .navItem {
-  margin: 0 20px; /* Augmenter légèrement l'espace entre les éléments pour équilibrer */
+  margin: 0 20px; 
 }
 
 .navLink {
   color: white;
   text-decoration: none;
-  font-size: 20px; /* Taille de texte légèrement plus grande pour correspondre au padding */
-  padding: 15px 20px; /* Espacement interne plus important pour correspondre à la barre */
+  font-size: 20px; 
+  padding: 15px 20px; 
   transition: all 0.3s ease;
 }
 
 .navLink:hover {
-  color: black; /* Conserver le contraste lors du survol */
+  color: black; 
   background-color: red;
-  font-size: 22px; /* Augmenter la taille au survol */
+  font-size: 22px; 
   border-radius: 5px;
 }
 
-.navLink.active {  /* Style pour le lien actif */
+.navLink.active {  
   background-color: red;
-  font-size: 22px; /* Conserver la même taille que lors du survol pour l'actif */
+  font-size: 22px; 
   border-radius: 5px;
-  color: black; /* Couleur du texte noir pour le lien actif */
+  color: black; 
 }
