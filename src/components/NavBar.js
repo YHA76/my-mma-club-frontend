@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'; // Utilisation de NavLink
-import '../styles/NavBar.css'; // Importation du fichier CSS
+import '../styles/NavBar.css'; 
 
 function Navbar() {
   return (
@@ -10,7 +10,7 @@ function Navbar() {
           <NavLink 
             to="/" 
             className="navLink"
-            activeClassName="active" // Classe ajoutée lorsque le lien est actif
+            activeClassName="active"
             exact
           >
             Accueil
