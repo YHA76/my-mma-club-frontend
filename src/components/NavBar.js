@@ -35,14 +35,18 @@ function Navbar() {
         </li>
       </ul>
       <div className="socialIcons">
+        <a href='https://www.snapchat.com/add/mmacasbahfight?invite_id=rCJkCARU&locale=fr_FR&share_id=RydhjjbpRVi0UUa33pOCGQ&sid=559b3f2fd9bc4ea0a21470a07e8e47f5'>
         <FontAwesomeIcon 
           icon={faSquareSnapchat} 
           beat 
-          style={{color: "#fffc00",}} />
+          style={{color: "#fffc00",}}/>
+          </a>
+          <a href='https://www.instagram.com/mmacasbahfight/?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr'>
         <FontAwesomeIcon
           icon={faSquareInstagram}
           beat
           style={{color: "#ff0285",}} />
+          </a>
         </div>
 
     </nav>

@@ -6,8 +6,8 @@ function Home() {
     <div>
       <Navbar />
       <div style={{ paddingTop: '90px' }}>
-        <h1>Bienvenue sur la page d'accueil du club de MMA !</h1>
-        <p>C'est la première page de ton application React.</p>
+        <h1>Découvrez ici l'art du combat</h1>
+        <h2>MMA   -  BOXE  -  LUTTE  -  GRAPPLING -  JJB  -  SAMBO -  MUAY-THAI  -  KICKBOXING</h2>
       </div>
     </div>
   );
