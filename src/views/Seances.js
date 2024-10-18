@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from '../components/NavBar'; // Importation de la barre de menu
-import "../styles/styles.css"; // Importation des styles globaux
-import "../styles/seances.css"; // Importation des styles globaux
+import Navbar from '../components/NavBar';
+import "../styles/styles.css";
+import "../styles/seances.css"; 
 
 
 function Seances() {
@@ -16,7 +16,7 @@ function Seances() {
         <table className="seances-table">
           <thead>
             <tr>
-              <th></th> {/* Cellule vide pour l'angle du tableau */}
+              <th></th>
               <th>Lundi</th>
               <th>Mardi</th>
               <th>Mercredi</th>
@@ -33,10 +33,10 @@ function Seances() {
               <td>20h00 - 22h00 <br /> Muay Thai</td>
               <td>❌</td>
               <td>20h00 - 22h15 <br /> Grappling</td>
-              <td>❌</td> {/* Pas de cours le jeudi */}
+              <td>❌</td> 
               <td>20h00 - 22h15 <br /> MMA</td>
               <td>15h00 - 16h30 <br /> Boxe</td>
-              <td>❌</td> {/* Pas de cours le dimanche */}
+              <td>❌</td>
             </tr>
             
             {/* Adolescents (13-17) */}
@@ -47,19 +47,19 @@ function Seances() {
               <td>18h00 - 19h30 <br /> Boxe</td>
               <td>❌</td>
               <td>18h00 - 19h30 <br /> Lutte</td>
-              <td>❌</td> {/* Pas de cours le samedi */}
-              <td>❌</td> {/* Pas de cours le dimanche */}
+              <td>❌</td>
+              <td>❌</td> 
             </tr>
 
             {/* Enfants (-13 ans) */}
             <tr>
               <td>Enfants (-13 ans)</td>
-              <td>❌</td> {/* Pas de cours le lundi */}
-              <td>❌</td> {/* Pas de cours le mardi */}
-              <td>❌</td> {/* Pas de cours le mercredi */}
-              <td>❌</td> {/* Pas de cours le jeudi */}
-              <td>❌</td> {/* Pas de cours le vendredi */}
-              <td>❌</td> {/* Pas de cours le samedi */}
+              <td>❌</td>
+              <td>❌</td> 
+              <td>❌</td> 
+              <td>❌</td> 
+              <td>❌</td> 
+              <td>❌</td> 
               <td>11h00 - 12h15 <br /> MMA</td>
             </tr>
           </tbody>
