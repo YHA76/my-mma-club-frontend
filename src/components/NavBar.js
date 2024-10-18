@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import '../styles/NavBar.css'; // Importation du fichier CSS
+import '../styles/navBar.css'; // Importation du fichier CSS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareSnapchat, faSquareInstagram } from '@fortawesome/free-brands-svg-icons'; // Importation de l'icône Snapchat
 
