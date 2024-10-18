@@ -1,0 +1,21 @@
+/* Global styles in styles.css */
+body {
+  font-family: 'Open Sans', sans-serif; /* Appliquer Open Sans à tout le projet */
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333; /* Couleur par défaut du texte */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif; /* Appliquer Open Sans aux titres */
+  font-weight: 700; /* Version gras pour les titres */
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6; /* Espacement pour une meilleure lisibilité */
+}
+
