@@ -1,10 +1,13 @@
 .navbar {
-  background-color: #333;
+  background-color: #1D1A1A;
   padding: 15px 0;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* Espacement entre les éléments de la nav et l'icône Snapchat */
+  align-items: center; 
 }
 
 .navList {
@@ -13,6 +16,8 @@
   justify-content: center;
   margin: 0;
   padding: 0;
+  flex-grow: 1;  /* Laisser la nav grandir pour remplir l'espace disponible */
+  justify-content: center;
 }
 
 .navItem {
@@ -22,21 +27,33 @@
 .navLink {
   color: white;
   text-decoration: none;
-  font-size: 20px; 
+  font-size: 22px; 
   padding: 15px 20px; 
   transition: all 0.3s ease;
 }
 
 .navLink:hover {
   color: black; 
-  background-color: red;
+  background-color: #E11019;
   font-size: 22px; 
   border-radius: 5px;
 }
 
 .navLink.active {  
-  background-color: red;
+  background-color: #E11019;
   font-size: 22px; 
   border-radius: 5px;
   color: black; 
+}
+
+.socialIcons {
+  margin-right: 30px; /* Espace à droite de l'icône */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.socialIcons {
+  font-size: 50px; /* Taille de l'icône */
+  cursor: pointer;
 }
