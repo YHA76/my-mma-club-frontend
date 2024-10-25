@@ -9,15 +9,15 @@ function Gallery() {
   const images = [
     {
       src: require("../assets/images/picture_3.JPG"),
-      description: "Stage avec Benoît Saint-Denis dans notre salle 18/12/2023"
+      description: ( <> Stage avec Benoît Saint-Denis dans notre salle : <br /> 18/12/2023</> )
     },
     {
       src: require("../assets/images/picture_2.jpg"),
-      description: "Première séance avec notre coach de MMA et lutte ​Ibrahim et son ami Islam champion de Grappling , 10/11/2023"
+      description: ( <> Première séance avec notre coach de MMA et lutte ​Ibrahim et son ami Islam champion de Grappling : <br /> 10/11/2023 </> )
     },
     {
       src: require("../assets/images/picture_1.jpeg"),
-      description: "remier entraînement depuis la reprise, avec Yazid notre coach de Muay thaï et Striking, 11/11/2023"
+      description: ( <> remier entraînement depuis la reprise, avec Yazid notre coach de Muay thaï et Striking : <br /> 11/11/2023 </>)
     }
   ];
 
