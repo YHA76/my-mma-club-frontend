@@ -36,6 +36,7 @@ function Seances() {
               <td>❌</td> 
               <td>20h00 - 22h15 <br /> MMA</td>
               <td>15h00 - 16h30 <br /> Boxe</td>
+              
               <td>❌</td>
             </tr>
             
