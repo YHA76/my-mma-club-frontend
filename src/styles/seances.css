@@ -172,7 +172,7 @@
 
 .seances-filter-buttons button:focus {
   outline: none;
-  background-color: #FFA500;
+  background-color: #E11019;
 }
 
 @media (max-width: 1024px) {
