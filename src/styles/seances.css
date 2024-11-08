@@ -93,32 +93,32 @@
 
 /* Styles pour les diffÃ©rents types de cours */
 .muay-thai {
-  background-color: #a5673f; /* Brun chaud */
-  color: white;
+  background-color: #fdfd26; 
+  color: #333;
 }
 
 .grappling {
-  background-color: #5ca0d3; /* Bleu adouci */
+  background-color: #BA55D3; 
   color: white;
 }
 
 .mma {
-  background-color: #e74c3c; /* Rouge vif */
+  background-color: #E11019; 
   color: white;
 }
 
 .boxing {
-  background-color: #f1c40f; /* Jaune doux */
-  color: #333;
+  background-color: #00BFFF; 
+  color: white;
 }
 
 .kickboxing {
-  background-color: #e67e22; /* Orange intense */
+  background-color: #eb5803; 
   color: white;
 }
 
 .wrestling {
-  background-color: #9b59b6; /* Violet doux */
+  background-color: #9b59b6;
   color: white;
 }
 
@@ -149,6 +149,32 @@
   font-size: 0.9rem;
 }
 
+.seances-filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.seances-filter-buttons button {
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.seances-filter-buttons button:hover {
+  background-color: #555;
+}
+
+.seances-filter-buttons button:focus {
+  outline: none;
+  background-color: #FFA500;
+}
+
 @media (max-width: 1024px) {
   .seances-schedule-grid {
     grid-template-columns: 120px repeat(7, 1fr);
@@ -162,20 +188,17 @@
 }
 
 @media (max-width: 768px) {
-  .seances-page {
-    padding: 1rem;
-  }
-
   .seances-schedule-container {
-    overflow-x: auto;
+      overflow-x: scroll;
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling pour iOS */
   }
 
-  .seances-schedule-grid {
-    min-width: 900px;
+  .seances-schedule-container::-webkit-scrollbar {
+      height: 8px; /* Ajustez la hauteur de la barre de défilement */
   }
 
-  .seances-legend-items {
-    flex-direction: column;
-    align-items: center;
+  .seances-schedule-container::-webkit-scrollbar-thumb {
+      background-color: #999;
+      border-radius: 4px;
   }
 }
