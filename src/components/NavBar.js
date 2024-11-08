@@ -24,8 +24,8 @@ function Navbar() {
           </NavLink>
         </li>
         <li className="navItem">
-          <NavLink to="/programmes" className="navLink">
-            Programmes
+          <NavLink to="/gallery" className="navLink">
+            Galeries
           </NavLink>
         </li>
         <li className="navItem">

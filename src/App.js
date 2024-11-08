@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './views/Home';
 import About from './views/About';
 import Seances from './views/Seances';
-import Programmes from './views/Programmes';
+import Gallery from './views/Gallery';
 import Inscrire from './views/Inscrire';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/seances" element={<Seances />} />
-        <Route path="/programmes" element={<Programmes />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/inscrire" element={<Inscrire />} />
       </Routes>
     </Router>
