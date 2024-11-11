@@ -2,6 +2,8 @@ import React from 'react';
 import Navbar from '../components/NavBar';
 import "../styles/Styles.css";
 import "../styles/Inscription.css";
+import Footer from '../components/Footer.js';
+
 
 function Inscription() {
   // Tableau d'images et de descriptions
@@ -27,6 +29,7 @@ function Inscription() {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

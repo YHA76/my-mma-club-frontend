@@ -12,6 +12,7 @@ function Navbar() {
     { path: "/", label: "Accueil", exact: true },
     { path: "/about", label: "Qui nous sommes" },
     { path: "/seances", label: "Séances" },
+    { path: "/installations", label: "Installations"},
     { path: "/gallery", label: "Galeries" },
     { path: "/inscrire", label: "S'inscrire" }
   ];

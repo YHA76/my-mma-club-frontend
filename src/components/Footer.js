@@ -1,6 +1,7 @@
 // Footer.js
 import React from 'react';
 import '../styles/Footer.css';
+import logo from '../assets/images/logo_mma.png'
 
 function Footer() {
   return (
@@ -19,15 +20,15 @@ function Footer() {
           <ul>
             <li><a href="/">Accueil</a></li>
             <li><a href="/about">Qui nous sommes</a></li>
-            <li><a href="/gallery">Galerie</a></li>
             <li><a href="/seances">Séances</a></li>
+            <li><a href="/gallery">Galerie</a></li>
             <li><a href="inscrire">S'inscrire</a></li>
           </ul>
         </div>
 
         <div className="footer-section logo">
-          <h3>Nom du Site</h3>
-          <p>MMA Casbah Fight</p>
+          <h3>MMA Casbah Fight</h3>
+          <img src={logo} />
         </div>
       </div>
 
