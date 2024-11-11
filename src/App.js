@@ -6,10 +6,12 @@ import About from './views/About';
 import Seances from './views/Seances';
 import Gallery from './views/Gallery';
 import Inscrire from './views/Inscrire';
+import DarkBackground from './components/DarkBackground.tsx';
 
 function App() {
   return (
     <Router>  {/* Le Router encapsule toutes les routes et le Navbar */}
+    <DarkBackground />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

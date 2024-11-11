@@ -1,8 +1,8 @@
 import React from 'react';
 import Navbar from '../components/NavBar';
 import { motion } from 'framer-motion'; // Importation de framer-motion pour l'animation
-import "../styles/styles.css"; 
-import "../styles/gallery.css"; 
+import "../styles/Styles.css";
+import "../styles/Gallery.css"; 
 
 function Gallery() {
   // Images et descriptions associées

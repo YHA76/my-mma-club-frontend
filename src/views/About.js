@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '../components/NavBar'; // Importation de la barre de menu
-import "../styles/styles.css";
-
+import "../styles/Styles.css";
 function About() {
   return (
     <div>

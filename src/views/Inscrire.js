@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from '../components/NavBar'; // Barre de navigation
-import "../styles/styles.css"; // Importation des styles globaux
-import "../styles/inscription.css"; // Importation des styles spécifiques
+import Navbar from '../components/NavBar';
+import "../styles/Styles.css";
+import "../styles/Inscription.css";
 
 function Inscription() {
   // Tableau d'images et de descriptions

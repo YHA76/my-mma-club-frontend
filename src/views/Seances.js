@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Navbar from '../components/NavBar';
 import Schedule from '../components/Schedule.tsx';
-import "../styles/styles.css";
-import "../styles/seances.css"; 
+import "../styles/Styles.css";
+import "../styles/Seances.css";
+import Footer from '../components/Footer.js';
+
 
 function Seances() {
   const [filter, setFilter] = useState("all"); // État pour le filtre d'âge
@@ -80,6 +82,7 @@ function Seances() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
