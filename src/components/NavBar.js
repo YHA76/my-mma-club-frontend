@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareSnapchat, faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import '../styles/NavBar.css';
+import logo from '../assets/images/logo.jpg';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ function Navbar() {
     { path: "/", label: "Accueil", exact: true },
     { path: "/about", label: "Qui nous sommes" },
     { path: "/seances", label: "Séances" },
-    { path: "/installations", label: "Installations"},
+    { path: "/installations", label: "Installations" },
     { path: "/gallery", label: "Galeries" },
     { path: "/inscrire", label: "S'inscrire" }
   ];
@@ -20,6 +21,11 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
+        <div className="navbar-logo">
+          <NavLink to="/">
+            <img src={logo} alt="Logo du Club" className="logo-image" />
+          </NavLink>
+        </div>
         <button className="mobile-menu-btn" onClick={() => setIsOpen(!isOpen)}>
           <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
         </button>
