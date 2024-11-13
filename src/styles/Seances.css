@@ -1,6 +1,6 @@
 .seances-page {
-  padding: 2rem 2rem 4rem 2rem; /* Haut, droite, bas, gauche */
-  background-color: #333; /* Fond sombre */
+  padding: 2rem 2rem 4rem 2rem;
+  background-color: #333;
   min-height: 100vh;
 }
 
@@ -13,21 +13,21 @@
 
 .seances-title {
   font-size: 2.5rem;
-  color: #f5f5f5; /* Texte clair */
+  color: #f5f5f5; 
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .seances-description {
   font-size: 1.1rem;
-  color: #e0e0e0; /* Texte légèrement plus clair */
+  color: #e0e0e0;
   line-height: 1.6;
 }
 
 .seances-schedule-container {
   max-width: 1200px;
   margin: 0 auto;
-  background: #444; /* Fond plus clair pour le conteneur de planning */
+  background: #444; 
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 2rem;
@@ -43,15 +43,15 @@
   padding: 1rem;
   font-weight: 600;
   text-align: center;
-  background: #555; /* Fond de header plus clair */
-  color: #f5f5f5; /* Texte clair */
+  background: #555; 
+  color: #f5f5f5;
   border-radius: 8px;
 }
 
 .seances-age-group {
   font-weight: 600;
   padding: 1rem;
-  background: #555; /* Fond plus clair pour différencier des autres éléments */
+  background: #555;
   color: #f5f5f5;
   border-radius: 8px;
   display: flex;
