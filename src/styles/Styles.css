@@ -1,17 +1,17 @@
 /* Global styles in styles.css */
 body {
-  font-family: 'Open Sans', sans-serif; /* Appliquer Open Sans à tout le projet */
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #ffffff; /* Couleur par défaut du texte */
+  color: #ffffff;
   background-color: #333;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', sans-serif; /* Appliquer Open Sans aux titres */
-  font-weight: 700; /* Version gras pour les titres */
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
 }
 
 p {

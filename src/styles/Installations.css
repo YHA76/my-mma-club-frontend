@@ -1,8 +1,7 @@
-/* Page Setup */
 .installations-page {
   padding: 2rem;
-  background-color: #1e1e1e; /* Fond sombre pour un meilleur contraste */
-  color: #e0e0e0; /* Texte clair pour une meilleure lisibilité */
+  background-color: #1e1e1e; 
+  color: #e0e0e0;
   min-height: 100vh;
 }
 
@@ -10,7 +9,7 @@
 .installations-title {
   text-align: center;
   font-size: 2.5rem;
-  color: #ffffff; /* Texte blanc */
+  color: #ffffff;
   margin-bottom: 1.5rem;
   font-weight: 700;
 }
@@ -18,7 +17,7 @@
 .installations-description {
   text-align: center;
   font-size: 1.2rem;
-  color: #d0d0d0; /* Texte légèrement plus clair que le fond */
+  color: #d0d0d0; 
   margin-bottom: 2rem;
 }
 
@@ -43,7 +42,7 @@
   width: auto; /* Ajuste la largeur en fonction de la hauteur */
   object-fit: cover; /* Recadre pour remplir la taille définie */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre légère pour esthétisme */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -51,7 +50,7 @@
 .equipment-list {
   list-style-type: disc;
   padding-left: 1.5rem;
-  color: #ff4500; /* Couleur rouge vif pour les éléments de la liste */
+  color: #ff4500;
   font-size: 1rem;
 }
 
