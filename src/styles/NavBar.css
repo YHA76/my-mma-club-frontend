@@ -91,6 +91,13 @@
   padding: 0.5rem;
 }
 
+.logo-image {
+  height: 50px; /* Ajustez la hauteur selon vos besoins */
+  width: auto; /* Conserve le ratio de l'image */
+  margin-right: 15px; /* Espace entre le logo et les autres éléments */
+  cursor: pointer; /* Change le curseur pour montrer que c'est cliquable */
+}
+
 @media (max-width: 968px) {
   .mobile-menu-btn {
     display: block;

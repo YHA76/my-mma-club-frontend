@@ -15,7 +15,7 @@ function Navbar() {
     { path: "/seances", label: "Séances" },
     { path: "/installations", label: "Installations" },
     { path: "/gallery", label: "Galeries" },
-    { path: "/inscrire", label: "S'inscrire" }
+    { path: "/inscription", label: "Inscription" }
   ];
 
   return (

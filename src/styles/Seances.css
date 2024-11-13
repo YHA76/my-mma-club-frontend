@@ -1,6 +1,6 @@
 .seances-page {
-  padding: 2rem;
-  background-color: #f8f9fa;
+  padding: 2rem 2rem 4rem 2rem; /* Haut, droite, bas, gauche */
+  background-color: #333; /* Fond sombre */
   min-height: 100vh;
 }
 
@@ -13,21 +13,21 @@
 
 .seances-title {
   font-size: 2.5rem;
-  color: #2c3e50;
+  color: #f5f5f5; /* Texte clair */
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .seances-description {
   font-size: 1.1rem;
-  color: #666;
+  color: #e0e0e0; /* Texte légèrement plus clair */
   line-height: 1.6;
 }
 
 .seances-schedule-container {
   max-width: 1200px;
   margin: 0 auto;
-  background: white;
+  background: #444; /* Fond plus clair pour le conteneur de planning */
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 2rem;
@@ -43,16 +43,16 @@
   padding: 1rem;
   font-weight: 600;
   text-align: center;
-  background: #333;
-  color: white;
+  background: #555; /* Fond de header plus clair */
+  color: #f5f5f5; /* Texte clair */
   border-radius: 8px;
 }
 
 .seances-age-group {
   font-weight: 600;
   padding: 1rem;
-  background: #333;
-  color: white;
+  background: #555; /* Fond plus clair pour différencier des autres éléments */
+  color: #f5f5f5;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -74,12 +74,12 @@
   transform: scale(1.05);
   background-color: #FFA500; /* Couleur orange pour le survol */
   color: #fff; /* Couleur du texte pour le survol */
-
 }
 
 .mma-schedule-time {
   font-weight: 600;
   margin-bottom: 0.5rem;
+  color: #f5f5f5;
 }
 
 .mma-schedule-activity {
@@ -91,29 +91,29 @@
   font-size: 1.2rem;
 }
 
-/* Styles pour les diffÃ©rents types de cours */
+/* Styles pour les différents types de cours */
 .muay-thai {
-  background-color: #fdfd26; 
-  color: #333;
+  background-color: #5D4037;
+  color: #ffffff;
 }
 
 .grappling {
-  background-color: #BA55D3; 
-  color: white;
+  background-color: #EC407A;
+  color: white !important;
 }
 
 .mma {
-  background-color: #E11019; 
+  background-color: #E11019;
   color: white;
 }
 
 .boxing {
-  background-color: #00BFFF; 
+  background-color: #00BFFF;
   color: white;
 }
 
 .kickboxing {
-  background-color: #eb5803; 
+  background-color: #eb5803;
   color: white;
 }
 
@@ -125,15 +125,16 @@
 .seances-legend {
   margin-top: 2rem;
   padding: 1rem;
-  background: white;
+  background: #444; /* Fond pour la légende */
   border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #f5f5f5;
 }
 
 .seances-legend h3 {
   text-align: center;
   margin-bottom: 1rem;
-  color: #2c3e50;
+  color: #f5f5f5;
 }
 
 .seances-legend-items {
@@ -158,8 +159,8 @@
 
 .seances-filter-buttons button {
   padding: 0.5rem 1rem;
-  background-color: #333;
-  color: white;
+  background-color: #555; /* Boutons plus clairs pour le fond sombre */
+  color: #f5f5f5;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -167,12 +168,82 @@
 }
 
 .seances-filter-buttons button:hover {
-  background-color: #555;
+  background-color: #777;
 }
 
 .seances-filter-buttons button:focus {
   outline: none;
   background-color: #E11019;
+}
+
+/* Styles pour la section galerie d'équipements */
+.equipment-gallery {
+  margin-top: 2rem;
+}
+
+.dual-gallery {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start; /* Aligne le haut des deux sections */
+}
+
+.gallery-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.equipment-gallery-title {
+  font-size: 1.5rem;
+  color: #f5f5f5;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.image-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.equipment-image {
+  width: calc(33.33% - 1rem); /* Divise l'espace en trois images */
+  max-width: 200px; /* Limite la largeur des images */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Version mobile : empile les images */
+@media (max-width: 768px) {
+  .dual-gallery {
+    flex-direction: column; /* Les sections restent les unes en dessous des autres */
+  }
+
+  .seances-schedule-container {
+      overflow-x: scroll;
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling pour iOS */
+  }
+
+  .seances-schedule-container::-webkit-scrollbar {
+      height: 8px;
+  }
+
+  .seances-schedule-container::-webkit-scrollbar-thumb {
+      background-color: #999;
+      border-radius: 4px;
+  }
+
+  .image-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .equipment-image {
+    max-width: 100%; /* Prend toute la largeur en mobile */
+  }
 }
 
 @media (max-width: 1024px) {
@@ -184,21 +255,5 @@
   .mma-schedule-item {
     padding: 0.5rem;
     font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .seances-schedule-container {
-      overflow-x: scroll;
-      -webkit-overflow-scrolling: touch; /* Smooth scrolling pour iOS */
-  }
-
-  .seances-schedule-container::-webkit-scrollbar {
-      height: 8px; /* Ajustez la hauteur de la barre de défilement */
-  }
-
-  .seances-schedule-container::-webkit-scrollbar-thumb {
-      background-color: #999;
-      border-radius: 4px;
   }
 }

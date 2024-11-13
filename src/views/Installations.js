@@ -4,6 +4,8 @@ import "../styles/Styles.css";
 import "../styles/Installations.css"
 import Footer from '../components/Footer.js';
 import salleImage from '../assets/images/salle.jpg';
+import salleImage2 from '../assets/images/salle_2.jpg';
+import salleImage3 from '../assets/images/salle_3.jpg';
 
 function Installations() {
   return (
@@ -21,7 +23,10 @@ function Installations() {
           <p className='text'>
             Notre salle de combat est équipée de tatamis épais et lisses, spécialement conçus pour le MMA et les exercices au sol. La zone d'entraînement est entourée de protections murales pour permettre le travail contre la "cage" en toute sécurité.
           </p>
+          <div className="installation-images-container">
           <img src={salleImage} alt="Salle de combat" className="installation-image" />
+          <img src={salleImage2} alt="Salle de combat" className="installation-image" />
+          </div>
         </section>
 
         {/* Section 2: Équipements de Frappe et de Grappling */}
@@ -30,7 +35,10 @@ function Installations() {
           <p className='text'>
             Nous mettons à disposition plusieurs sacs de frappe et de grappling pour travailler les compétences en frappes pieds-poings, ainsi que les transitions au sol.
           </p>
-          <img src="/path/to/equipment.jpg" alt="Équipements de frappe et de grappling" className="installation-image" />
+          <div className="installation-images-container">
+          <img src={salleImage3} alt="Salle de combat" className="installation-image" />
+          
+          </div>
         </section>
 
         {/* Section 3: Entraînement Extérieur */}
@@ -40,24 +48,6 @@ function Installations() {
             À proximité de la salle, un parcours en forêt, une grande côte et un large escalier sont disponibles pour travailler la condition physique en groupe, apportant un environnement naturel et varié pour les séances de renforcement physique.
           </p>
           <img src="/path/to/outdoor-training.jpg" alt="Entraînement extérieur" className="installation-image" />
-        </section>
-
-        {/* Section 4: Équipements Requis pour les Pratiquants */}
-        <section className="installation-section">
-          <h2 className="installation-subtitle">Équipements Requis</h2>
-          <ul className="equipment-list">
-            <li>Une paire de gants de boxe (16 OZ minimum)</li>
-            <li>Une paire de protège-tibias</li>
-            <li>Une paire de coudières coquées</li>
-            <li>Une paire de bandes</li>
-            <li>Une coquille</li>
-            <li>Un protège-dents</li>
-            <li>Une paire de gants de MMA rembourrés (mitaine interdite)</li>
-            <li>Une bouteille d’eau</li>
-          </ul>
-          <p className='text'>
-            Ces équipements sont essentiels pour garantir une pratique sécurisée et efficace du MMA. Pensez à vous équiper correctement pour éviter les blessures et maximiser vos performances.
-          </p>
         </section>
       </div>
       <Footer />

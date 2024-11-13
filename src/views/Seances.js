@@ -4,6 +4,12 @@ import Schedule from '../components/Schedule.tsx';
 import "../styles/Styles.css";
 import "../styles/Seances.css";
 import Footer from '../components/Footer.js';
+import gant1 from '../assets/images/bon_gant_1.webp'
+import gant2 from '../assets/images/bon_gant_2.webp'
+import gant3 from '../assets/images/bon_gant_3.webp'
+import gant4 from '../assets/images/bad_gant_1.webp'
+import gant5 from '../assets/images/bad_gant_2.webp'
+import gant6 from '../assets/images/bad_gant_3.webp'
 
 
 function Seances() {
@@ -81,7 +87,49 @@ function Seances() {
             ) : null}
           </div>
         </div>
+        {/* Section Équipements Requis */}
+<section className="installation-section">
+  <h2 className="installation-subtitle">Équipements Requis</h2>
+  <ul className="equipment-list">
+    <li>Une paire de gants de boxe (16 OZ minimum)</li>
+    <li>Une paire de protège-tibias</li>
+    <li>Une paire de coudières coquées</li>
+    <li>Une paire de bandes</li>
+    <li>Une coquille</li>
+    <li>Un protège-dents</li>
+    <li>Une paire de gants de MMA rembourrés (mitaine interdite)</li>
+    <li>Une bouteille d’eau</li>
+  </ul>
+  <p className="text">
+    Ces équipements sont essentiels pour garantir une pratique sécurisée et efficace du MMA. Pensez à vous équiper correctement pour éviter les blessures et maximiser vos performances.
+  </p>
+  <section className="equipment-gallery">
+          <div className="dual-gallery">
+            {/* Section pour s’entraîner et progresser */}
+            <div className="gallery-section">
+              <h3 className="equipment-gallery-title">Idéal pour s’entraîner et progresser</h3>
+              <div className="image-row">
+                <img src={gant1} alt="Équipement 1" className="equipment-image" />
+                <img src={gant2} alt="Équipement 2" className="equipment-image" />
+                <img src={gant3} alt="Équipement 3" className="equipment-image" />
+              </div>
+            </div>
+
+            {/* Section pour se blesser */}
+            <div className="gallery-section">
+              <h3 className="equipment-gallery-title">Idéal pour se blesser</h3>
+              <div className="image-row">
+                <img src={gant4} alt="Équipement 4" className="equipment-image" />
+                <img src={gant5} alt="Équipement 5" className="equipment-image" />
+                <img src={gant6} alt="Équipement 6" className="equipment-image" />
+              </div>
+            </div>
+          </div>
+        </section>
+</section>
+
       </div>
+
       <Footer />
     </div>
   );
