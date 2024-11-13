@@ -1,0 +1,31 @@
+.about-page {
+    padding: 2rem;
+    background-color: #333; /* Fond sombre */
+    min-height: 100vh;
+  }
+  
+  .about-section {
+    margin: 90px auto 0;
+    padding: 1.5rem;
+    background-color: #444; /* Fond légèrement plus clair pour le bloc */
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+    color: #f5f5f5;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e0e0; /* Texte légèrement plus clair */
+    text-align: justify;
+    margin-bottom: 1rem;
+  }
+  

@@ -1,7 +1,9 @@
 import React from 'react';
-import Navbar from '../components/NavBar'; // Barre de navigation
-import "../styles/styles.css"; // Importation des styles globaux
-import "../styles/inscription.css"; // Importation des styles spécifiques
+import Navbar from '../components/NavBar.js';
+import "../styles/Styles.css";
+import "../styles/Inscription.css";
+import Footer from '../components/Footer.js';
+
 
 function Inscription() {
   // Tableau d'images et de descriptions
@@ -27,6 +29,7 @@ function Inscription() {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

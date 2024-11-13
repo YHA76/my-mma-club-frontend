@@ -5,7 +5,8 @@ import Home from './views/Home';
 import About from './views/About';
 import Seances from './views/Seances';
 import Gallery from './views/Gallery';
-import Inscrire from './views/Inscrire';
+import Inscription from './views/Inscription';
+import Installations from './views/Installations.js';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/seances" element={<Seances />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/inscrire" element={<Inscrire />} />
+        <Route path="/inscription" element={<Inscription />} />
+        <Route path='/installations' element={<Installations />} />
       </Routes>
     </Router>
   );
