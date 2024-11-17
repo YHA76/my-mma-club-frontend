@@ -1,6 +1,17 @@
+.full-page {
+  background: 
+    linear-gradient(135deg, #121212 0%, #3a3a3a 100%), 
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.05) 10px,
+      transparent 10px,
+      transparent 20px
+    );
+}
+
 .about-page {
     padding: 2rem;
-    background-color: #333; /* Fond sombre */
     min-height: 100vh;
   }
   

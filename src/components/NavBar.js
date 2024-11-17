@@ -10,7 +10,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { path: "/", label: "Accueil", exact: true },
+    { path: "/", label: "Accueil" },
     { path: "/about", label: "Qui nous sommes" },
     { path: "/seances", label: "Séances" },
     { path: "/installations", label: "Installations" },

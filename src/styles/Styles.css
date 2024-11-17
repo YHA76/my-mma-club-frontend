@@ -6,7 +6,17 @@ body {
   padding: 0;
   box-sizing: border-box;
   color: #ffffff;
-  background-color: #333;
+  background: 
+  linear-gradient(135deg, #121212 0%, #3a3a3a 100%), /* Dégradé */
+  repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 10px,
+    transparent 10px,
+    transparent 20px
+  ); /* Texture subtile */
+  
+  
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,4 +28,60 @@ p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   line-height: 1.6; /* Espacement pour une meilleure lisibilité */
+}
+
+.home-page {
+  text-align: center;
+  color: #f5f5f5;
+}
+
+.logo-section {
+  margin-bottom: 2rem;
+}
+
+.club-logo {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.partners-section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.partners-logos {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.partner-logo {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.address-section {
+  margin-top: 3rem;
+}
+
+/* Conteneur responsive pour l'iframe */
+.responsive-iframe-container {
+  position: relative;
+  width: 90%; /* S'adapte à la largeur du parent */
+  padding-bottom: 56.25%; /* Rapport 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.responsive-iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%; /* S'étend sur toute la largeur */
+  height: 90%; /* S'étend sur toute la hauteur */
+  border: 0;
 }

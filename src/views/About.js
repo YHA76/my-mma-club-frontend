@@ -7,6 +7,7 @@ function About() {
   return (
     <div>
       <Navbar />
+      <div className="full-page">
       <div className="about-page" style={{ paddingTop: '90px' }}>
         <section className="about-section">
           <h1 className="about-title">Qui sommes nous</h1>
@@ -25,6 +26,7 @@ function About() {
         </section>
       </div>
       <Footer />
+    </div>
     </div>
   );
 }
