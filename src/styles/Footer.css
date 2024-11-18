@@ -169,7 +169,8 @@
   }
 
   .footer-section {
-    padding: 10px;
+    text-align: center; /* Centre le contenu */
+    padding: 10px; /* Réduit le padding */
   }
 
   .footer-section h3 {

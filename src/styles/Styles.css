@@ -1,87 +1,169 @@
-/* Global styles in styles.css */
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Main Container */
+.main-container {
+  background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+  min-height: 100vh;
   color: #ffffff;
-  background: 
-  linear-gradient(135deg, #121212 0%, #3a3a3a 100%), /* Dégradé */
-  repeating-linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.03),
-    rgba(255, 255, 255, 0.03) 10px,
-    transparent 10px,
-    transparent 20px
-  ); /* Texture subtile */
-  
-  
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-}
-
-p {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  line-height: 1.6; /* Espacement pour une meilleure lisibilité */
-}
-
-.home-page {
+/* Hero Section */
+.hero-section {
+  padding: 4rem 2rem;
   text-align: center;
-  color: #f5f5f5;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('../assets/images/salle.jpg') center/cover;
+  position: relative;
 }
 
-.logo-section {
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
   margin-bottom: 2rem;
 }
 
 .club-logo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.club-logo:hover {
+  transform: scale(1.05);
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, #E11019, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Disciplines Grid */
+.disciplines-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.discipline-tag {
+  background: #E11019;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.discipline-tag:hover {
+  transform: translateY(-2px);
+}
+
+/* Features Section */
+.features-section {
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.features-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  color: #E11019;
+  margin-bottom: 1rem;
+}
+
+/* Partners Section */
+.partners-section {
+  padding: 4rem 2rem;
+  background: #0C0C0C;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #ffffff;
+}
+
+.partners-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.partner-logo {
   width: 200px;
   height: auto;
   border-radius: 10px;
 }
 
-.partners-section {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+/* Location Section */
+.location-section {
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
 }
 
-.partners-logos {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.partner-logo {
-  width: 250px;
-  height: auto;
-  border-radius: 8px;
-}
-
-.address-section {
-  margin-top: 3rem;
-}
-
-/* Conteneur responsive pour l'iframe */
-.responsive-iframe-container {
-  position: relative;
-  width: 90%; /* S'adapte à la largeur du parent */
-  padding-bottom: 56.25%; /* Rapport 16:9 */
-  height: 0;
+.map-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 15px;
   overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.responsive-iframe-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 90%; /* S'étend sur toute la largeur */
-  height: 90%; /* S'étend sur toute la hauteur */
-  border: 0;
+.google-map {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-logo {
+    width: 150px;
+  }
+
+  .google-map {
+    height: 300px;
+  }
 }
