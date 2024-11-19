@@ -6,13 +6,13 @@ import coach1 from '../assets/images/coach_1.jpg'
 
 function About() {
   const coaches = [
-    { name: "Coach 1", description: "Spécialiste du Muay Thai.", photo: coach1 },
-    { name: "Coach 2", description: "Expert en Jiu-Jitsu Brésilien.", photo: coach1 },
-    { name: "Coach 3", description: "Champion régional de boxe.", photo: coach1 },
-    { name: "Coach 4", description: "Entraîneur de lutte olympique.", photo: coach1 },
-    { name: "Coach 5", description: "Spécialiste en MMA et conditioning.", photo: coach1 },
-    { name: "Coach 6", description: "Formateur en kickboxing.", photo: coach1 },
-    { name: "Coach 7", description: "Préparateur physique et nutritionniste.", photo: coach1 },
+    { name: "Coach 1", description: "Spécialiste du Muay Thai.", picture: coach1 },
+    { name: "Coach 2", description: "Expert en Jiu-Jitsu Brésilien.", picture: coach1 },
+    { name: "Coach 3", description: "Champion régional de boxe.", picture: coach1 },
+    { name: "Coach 4", description: "Entraîneur de lutte olympique.", picture: coach1 },
+    { name: "Coach 5", description: "Spécialiste en MMA et conditioning.", picture: coach1 },
+    { name: "Coach 6", description: "Formateur en kickboxing.", picture: coach1 },
+    { name: "Coach 7", description: "Préparateur physique et nutritionniste.", picture: coach1 },
   ];
   return (
     <div>
@@ -40,7 +40,7 @@ function About() {
             <div className="coaches-grid">
               {coaches.map((coach, index) => (
                 <div className="coach-card" key={index}>
-                  <img src={coach.photo} alt={coach.name} className="coach-photo" />
+                  <img src={coach.picture} alt={coach.name} className="coach-photo" />
                   <h3 className="coach-name">{coach.name}</h3>
                   <p className="coach-description">{coach.description}</p>
                 </div>
