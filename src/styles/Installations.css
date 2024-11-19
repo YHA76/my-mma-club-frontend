@@ -66,16 +66,15 @@
 
 /* Adaptation pour mobile */
 @media (max-width: 768px) {
-  .installations-title {
-    font-size: 2rem;
-  }
-
-  .installation-subtitle {
-    font-size: 1.5rem;
+  .installation-images-container {
+    flex-direction: column; /* Les images seront empilées sur mobile */
+    gap: 15px; /* Réduit l'espace entre les images */
   }
 
   .installation-image {
-    max-width: 100%; /* S'adapte à la largeur de l'écran */
+    width: 100%; /* Les images prennent toute la largeur de leur conteneur */
+    height: auto; /* Garde les proportions d'origine */
   }
 }
+
 

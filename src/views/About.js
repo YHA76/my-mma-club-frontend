@@ -5,7 +5,7 @@ import Footer from '../components/Footer.js';
 import coach1 from '../assets/images/coach_1.jpg'
 
 function About() {
-  const coaches = [
+  const coachs = [
     { name: "Coach 1", description: "Spécialiste du Muay Thai.", picture: coach1 },
     { name: "Coach 2", description: "Expert en Jiu-Jitsu Brésilien.", picture: coach1 },
     { name: "Coach 3", description: "Champion régional de boxe.", picture: coach1 },
@@ -35,10 +35,10 @@ function About() {
           </p>
         </section>
         {/* Section Descriptif des Coachs */}
-        <section className="coaches-section">
-            <h2 className="coaches-title">Nos Coachs</h2>
-            <div className="coaches-grid">
-              {coaches.map((coach, index) => (
+        <section className="coachs-section">
+            <h2 className="coachs-title">Nos Coachs</h2>
+            <div className="coachs-grid">
+              {coachs.map((coach, index) => (
                 <div className="coach-card" key={index}>
                   <img src={coach.picture} alt={coach.name} className="coach-photo" />
                   <h3 className="coach-name">{coach.name}</h3>
