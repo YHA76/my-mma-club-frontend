@@ -18,7 +18,6 @@ function Inscription() {
       <Navbar />
       <div className="inscription-page" style={{ paddingTop: '90px' }}>
         <h1 className="inscription-title">Formulaire d'Inscription</h1>
-        
         {/* Affichage des images sous forme de galerie */}
         <div className="pdf-gallery">
           {pages.map((page, index) => (
@@ -28,7 +27,15 @@ function Inscription() {
             </div>
           ))}
         </div>
+        <a
+        href="../assets/pdf/Licence_2025_MMA.pdf" 
+        download="Licence_2025_MMA.pdf"
+        className="download-button"
+      >
+        Télécharger le formulaire
+      </a>
       </div>
+      
       <Footer />
     </div>
   );

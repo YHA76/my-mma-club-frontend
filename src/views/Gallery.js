@@ -36,7 +36,6 @@ function Gallery() {
               <motion.img 
                 src={image.src} 
                 alt={`Description ${index + 1}`} 
-                whileHover={{ scale: 1.1 }} /* Grossissement */
                 whileTap={{ scale: 0.95 }}  /* Rétrécissement au clic */
                 transition={{ duration: 0.3 }} /* Durée de la transition */
               />
