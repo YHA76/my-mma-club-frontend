@@ -1,6 +1,6 @@
 .installations-page {
   padding: 2rem;
-  background: linear-gradient(135deg, #1a1a1a 0%, #3a3a3a 100%);
+  background: #1a1a1a;
   color: #e0e0e0;
   min-height: 100vh;
 }
@@ -25,7 +25,7 @@
 .installation-section {
   margin-bottom: 2.5rem;
   padding: 1rem;
-  background-color: #1a1a1a; /* Légère couleur de fond pour la section */
+  background-color: #444 !important; /* Légère couleur de fond pour la section */
   border-radius: 10px;
   margin: 90px auto 0;
 }
@@ -47,12 +47,6 @@
 
 
 /* Liste des équipements */
-.equipment-list {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-  color: #ff4500;
-  font-size: 1rem;
-}
 
 .text {
   color: #d0d0d0; /* Texte dans les paragraphes */

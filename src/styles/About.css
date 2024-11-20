@@ -1,61 +1,103 @@
-.full-page {
-  background: 
-    linear-gradient(135deg, #121212 0%, #3a3a3a 100%), 
-    repeating-linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.05),
-      rgba(255, 255, 255, 0.05) 10px,
-      transparent 10px,
-      transparent 20px
-    );
+/* Thèmes */
+.dark-mode .full-page {
+  background: #1a1a1a;
+}
+
+.light-mode .full-page {
+  background: #f5f5f5;
 }
 
 .about-page {
-    padding: 2rem;
-    min-height: 100vh;
-  }
-  
-  .about-section {
-    margin: 90px auto 0;
-    padding: 1.5rem;
-    background-color: #444; /* Fond légèrement plus clair pour le bloc */
-    border-radius: 10px;
-    max-width: 800px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  }
-  
-  .about-title {
-    font-size: 2.5rem;
-    color: #f5f5f5;
-    text-align: center;
-    margin-bottom: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .about-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #e0e0e0; /* Texte légèrement plus clair */
-    text-align: justify;
-    margin-bottom: 1rem;
-  }
+  padding: 2rem;
+  min-height: 100vh;
+}
 
-  /* Section Coachs */
+.about-section {
+  margin: 90px auto 0;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.7s ease;
+}
+
+/* Mode sombre - About Section */
+.dark-mode .about-section {
+  background-color: #444;
+}
+
+/* Mode clair - About Section */
+.light-mode .about-section {
+  background-color: #ffffff;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Couleurs du titre selon le thème */
+.dark-mode .about-title {
+  color: #f5f5f5;
+}
+
+.light-mode .about-title {
+  color: #333333;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Couleurs du texte selon le thème */
+.dark-mode .about-text {
+  color: #e0e0e0;
+}
+
+.light-mode .about-text {
+  color: #666666;
+}
+
+/* Section Coachs */
 .coachs-section {
   margin: 3rem auto;
   padding: 2rem;
-  background-color: #444;
   border-radius: 10px;
   max-width: 1200px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Thèmes pour la section coachs */
+.dark-mode .coachs-section {
+  background-color: #444;
+}
+
+.light-mode .coachs-section {
+  background-color: #ffffff;
 }
 
 .coachs-title {
   font-size: 2rem;
-  color: #f5f5f5;
   margin-bottom: 2rem;
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .coachs-title {
+  color: #f5f5f5;
+}
+
+.light-mode .coachs-title {
+  color: #333333;
 }
 
 .coachs-grid {
@@ -65,16 +107,24 @@
 }
 
 .coach-card {
-  background-color: #333;
   border-radius: 10px;
   padding: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .coach-card:hover {
   transform: scale(1.05);
+}
+
+/* Thèmes pour les cartes des coachs */
+.dark-mode .coach-card {
+  background-color: #333;
+}
+
+.light-mode .coach-card {
+  background-color: #f8f8f8;
 }
 
 .coach-photo {
@@ -94,8 +144,15 @@
 
 .coach-description {
   font-size: 1rem;
-  color: #e0e0e0;
   line-height: 1.5;
+  transition: color 0.3s ease;
 }
 
-  
+/* Couleurs de la description selon le thème */
+.dark-mode .coach-description {
+  color: #e0e0e0;
+}
+
+.light-mode .coach-description {
+  color: #666666;
+}

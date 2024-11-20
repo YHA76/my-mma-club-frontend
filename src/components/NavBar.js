@@ -1,13 +1,23 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSquareSnapchat, faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { 
+  faSquareSnapchat, 
+  faSquareInstagram 
+} from '@fortawesome/free-brands-svg-icons';
+import { 
+  faBars, 
+  faTimes, 
+  faSun, 
+  faMoon 
+} from '@fortawesome/free-solid-svg-icons';
+import { useTheme } from '../context/ThemeContext';
 import '../styles/NavBar.css';
 import logo from '../assets/images/logo.jpg';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { isDark, toggleTheme } = useTheme();
 
   const navItems = [
     { path: "/", label: "Accueil" },
@@ -19,13 +29,26 @@ function Navbar() {
   ];
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isDark ? 'dark' : 'light'}`}>
       <div className="navbar-container">
         <div className="navbar-logo">
           <NavLink to="/">
             <img src={logo} alt="Logo du Club" className="logo-image" />
           </NavLink>
         </div>
+
+        <button 
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label="Changer le thème"
+        >
+          <FontAwesomeIcon 
+            icon={isDark ? faSun : faMoon}
+            className="theme-icon"
+            color='white' 
+          />
+        </button>
+
         <button className="mobile-menu-btn" onClick={() => setIsOpen(!isOpen)}>
           <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
         </button>
@@ -36,7 +59,6 @@ function Navbar() {
               <NavLink
                 to={item.path}
                 className="navLink"
-                exact={item.exact}
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}

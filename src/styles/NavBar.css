@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #1D1A1A;
+  background-color: #000000;
   padding: 0;
   position: fixed;
   top: 0;
@@ -97,6 +97,37 @@
   margin-right: 15px; /* Espace entre le logo et les autres éléments */
   cursor: pointer; /* Change le curseur pour montrer que c'est cliquable */
 }
+/* Style du bouton dans la Navbar */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none; /* Pas de fond par défaut */
+  border: none; /* Pas de bordure */
+  cursor: pointer; /* Curseur interactif */
+  padding: 8px; /* Espacement interne */
+  border-radius: 50%; /* Forme arrondie */
+  transition: all 0.3s ease; /* Transition fluide */
+  color: white; /* Couleur du texte dans le thème actuel */
+}
+
+.dark-mode .theme-toggle {
+  color: var(--text-light); /* Contraste pour le mode sombre */
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Couleur de survol */
+}
+
+.theme-icon {
+  font-size: 1.5rem; /* Taille de l'icône */
+  transition: transform 0.3s ease; /* Transition fluide pour l'effet de mise en avant */
+}
+
+.theme-toggle:hover .theme-icon {
+  transform: scale(1.2); /* Légère mise en avant au survol */
+}
+
 
 @media (max-width: 968px) {
   .mobile-menu-btn {
@@ -113,7 +144,7 @@
     left: 0;
     right: 0;
     flex-direction: column;
-    background-color: #1D1A1A;
+    background-color: #000000;
     padding: 1.2rem 0;
     transform: translateY(-100%);
     opacity: 0;
