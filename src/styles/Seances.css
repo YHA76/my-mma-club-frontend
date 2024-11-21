@@ -1,8 +1,17 @@
 /* Page Séances */
 .seances-page {
   padding: 2rem 2rem 4rem 2rem;
-  background: #1a1a1a;
   min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* Thèmes pour la page */
+.dark-mode .seances-page {
+  background: #1a1a1a;
+}
+
+.light-mode .seances-page {
+  background: #f5f5f5;
 }
 
 /* Header de la page */
@@ -15,25 +24,52 @@
 
 .seances-title {
   font-size: 2.5rem;
-  color: #f5f5f5;
   margin-bottom: 1rem;
   font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+/* Thèmes pour le titre */
+.dark-mode .seances-title {
+  color: #f5f5f5;
+}
+
+.light-mode .seances-title {
+  color: #333;
 }
 
 .seances-description {
   font-size: 1.1rem;
-  color: #e0e0e0;
   line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+/* Thèmes pour la description */
+.dark-mode .seances-description {
+  color: #e0e0e0;
+}
+
+.light-mode .seances-description {
+  color: #666666;
 }
 
 /* Container de planning */
 .seances-schedule-container {
   max-width: 1200px;
   margin: 0 auto;
-  background: #444;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+/* Thèmes pour le container */
+.dark-mode .seances-schedule-container {
+  background: #444;
+}
+
+.light-mode .seances-schedule-container {
+  background: #ffffff;
 }
 
 .seances-schedule-grid {
@@ -46,20 +82,42 @@
   padding: 1rem;
   font-weight: 600;
   text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Thèmes pour les en-têtes */
+.dark-mode .seances-day-header, 
+.dark-mode .seances-time-header {
   background: #555;
   color: #f5f5f5;
-  border-radius: 8px;
+}
+
+.light-mode .seances-day-header, 
+.light-mode .seances-time-header {
+  background: #f0f0f0;
+  color: #333;
 }
 
 .seances-age-group {
   font-weight: 600;
   padding: 1rem;
-  background: #555;
-  color: #f5f5f5;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Thèmes pour les groupes d'âge */
+.dark-mode .seances-age-group {
+  background: #555;
+  color: #f5f5f5;
+}
+
+.light-mode .seances-age-group {
+  background: #f0f0f0;
+  color: #333;
 }
 
 /* Items du planning */
@@ -71,7 +129,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: transform 0.2s;
+  transition: all 0.3s ease;
 }
 
 .mma-schedule-item:hover {
@@ -83,7 +141,8 @@
 .mma-schedule-time {
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #f5f5f5;
+  transition: color 0.3s ease;
+  color: #fff;
 }
 
 .mma-schedule-activity {
@@ -91,11 +150,19 @@
 }
 
 .mma-schedule-no-class {
-  color: #999;
-  font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
 
-/* Types de cours */
+/* Thèmes pour les cases vides */
+.dark-mode .mma-schedule-no-class {
+  color: #999;
+}
+
+.light-mode .mma-schedule-no-class {
+  color: #666;
+}
+
+/* Types de cours - Inchangés car ils ont des couleurs spécifiques */
 .muay-thai {
   background-color: #5D4037;
   color: #ffffff;
@@ -130,16 +197,35 @@
 .seances-legend {
   margin-top: 2rem;
   padding: 1rem;
-  background: #444;
   border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Thèmes pour la légende */
+.dark-mode .seances-legend {
+  background: #444;
   color: #f5f5f5;
+}
+
+.light-mode .seances-legend {
+  background: #ffffff;
+  color: #333;
 }
 
 .seances-legend h3 {
   text-align: center;
   margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Thèmes pour le titre de la légende */
+.dark-mode .seances-legend h3 {
   color: #f5f5f5;
+}
+
+.light-mode .seances-legend h3 {
+  color: #333;
 }
 
 .seances-legend-items {
@@ -165,46 +251,86 @@
 
 .seances-filter-buttons button {
   padding: 0.5rem 1rem;
-  background-color: #555;
-  color: #f5f5f5;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.seances-filter-buttons button:hover {
-  background-color: #E11019;
+/* Thèmes pour les boutons */
+.dark-mode .seances-filter-buttons button {
+  background-color: #555;
+  color: #f5f5f5;
 }
 
+.light-mode .seances-filter-buttons button {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.seances-filter-buttons button:hover,
 .seances-filter-buttons button:focus {
-  outline: none;
   background-color: #E11019;
+  color: #ffffff;
+  outline: none;
 }
+
+/* Sections d'installation */
 .installation-section {
   margin-top: 2rem;
   padding: 2rem;
-  background-color: #222 !important; /* Couleur de fond pour la section */
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgb(0, 0, 0);
-  color: #f5f5f5;
+  transition: all 0.3s ease;
 }
+
+/* Thèmes pour les sections d'installation */
+.dark-mode .installation-section {
+  background-color: #222 !important;
+  color: #f5f5f5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.light-mode .installation-section {
+  background-color: #ffffff !important;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .installation-subtitle {
   font-size: 1.8rem;
-  color: #ffffff;
   text-align: center;
   margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Thèmes pour les sous-titres */
+.dark-mode .installation-subtitle {
+  color: #ffffff;
+}
+
+.light-mode .installation-subtitle {
+  color: #333;
 }
 
 /* Galerie d'équipements */
 .equipment-gallery {
   margin-top: 2rem;
 }
+
 .equipment-gallery-title {
   font-size: 1.5rem;
   text-align: center;
-  color: #ffffff;
   margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Thèmes pour les titres de galerie */
+.dark-mode .equipment-gallery-title {
+  color: #ffffff;
+}
+
+.light-mode .equipment-gallery-title {
+  color: #333;
 }
 
 .dual-gallery {
@@ -216,20 +342,20 @@
 
 .gallery-section {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #444 !important;
   padding: 1rem;
   border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Thèmes pour les sections de galerie */
+.dark-mode .gallery-section {
+  background: #333 !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.equipment-gallery-title {
-  font-size: 1.5rem;
-  color: #f5f5f5;
-  text-align: center;
-  margin-bottom: 1rem;
+.light-mode .gallery-section {
+  background: #f8f8f8 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .image-row {
@@ -242,7 +368,16 @@
   width: calc(33.33% - 1rem);
   max-width: 200px;
   border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Thèmes pour les images */
+.dark-mode .equipment-image {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.light-mode .equipment-image {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Liste d'équipements */
@@ -253,20 +388,8 @@
   color: #ff4500;
   font-size: 1rem;
 }
-.dual-gallery {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  align-items: flex-start;
-}
-.gallery-section {
-  flex: 1;
-  padding: 1rem;
-  background: #555; /* Couleur de fond pour différencier les galeries */
-  border-radius: 10px;
-}
 
-/* Responsive */
+/* Media Queries */
 @media (max-width: 768px) {
   .dual-gallery {
     flex-direction: column;

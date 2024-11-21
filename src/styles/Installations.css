@@ -1,74 +1,164 @@
 .installations-page {
   padding: 2rem;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* Thèmes pour la page */
+.dark-mode .installations-page {
   background: #1a1a1a;
   color: #e0e0e0;
-  min-height: 100vh;
+}
+
+.light-mode .installations-page {
+  background: #f5f5f5;
+  color: #333333;
 }
 
 /* Titres et sous-titres */
 .installations-title {
   text-align: center;
   font-size: 2.5rem;
-  color: #ffffff;
   margin-bottom: 1.5rem;
   font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+/* Thèmes pour le titre principal */
+.dark-mode .installations-title {
+  color: #ffffff;
+}
+
+.light-mode .installations-title {
+  color: #333333;
 }
 
 .installations-description {
   text-align: center;
   font-size: 1.2rem;
-  color: #d0d0d0; 
   margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+/* Thèmes pour la description */
+.dark-mode .installations-description {
+  color: #d0d0d0;
+}
+
+.light-mode .installations-description {
+  color: #666666;
 }
 
 /* Sections */
 .installation-section {
+  margin: 90px auto 0;
   margin-bottom: 2.5rem;
   padding: 1rem;
-  background-color: #444 !important; /* Légère couleur de fond pour la section */
   border-radius: 10px;
-  margin: 90px auto 0;
+  transition: all 0.3s ease;
+}
+
+/* Thèmes pour les sections */
+.dark-mode .installation-section {
+  background-color: #444 !important;
+}
+
+.light-mode .installation-section {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .installation-subtitle {
   font-size: 1.8rem;
-  color: #ffffff; /* Texte blanc pour les sous-titres */
   margin-bottom: 1rem;
   font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Thèmes pour les sous-titres */
+.dark-mode .installation-subtitle {
+  color: #ffffff;
+}
+
+.light-mode .installation-subtitle {
+  color: #333333;
 }
 
 .installation-image {
-  height: 300px; /* Hauteur fixe pour harmoniser les tailles */
-  width: auto; /* Ajuste la largeur en fonction de la hauteur */
-  object-fit: cover; /* Recadre pour remplir la taille définie */
+  height: 300px;
+  width: auto;
+  object-fit: cover;
   border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Thèmes pour les images */
+.dark-mode .installation-image {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-
-/* Liste des équipements */
+.light-mode .installation-image {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
 .text {
-  color: #d0d0d0; /* Texte dans les paragraphes */
+  transition: color 0.3s ease;
+}
+
+/* Thèmes pour le texte */
+.dark-mode .text {
+  color: #d0d0d0;
+}
+
+.light-mode .text {
+  color: #666666;
 }
 
 .installation-images-container {
   display: flex;
-  gap: 20px; /* Espace entre les images */
+  gap: 20px;
   justify-content: center;
 }
 
 /* Adaptation pour mobile */
 @media (max-width: 768px) {
   .installation-images-container {
-    flex-direction: column; /* Les images seront empilées sur mobile */
-    gap: 15px; /* Réduit l'espace entre les images */
+    flex-direction: column;
+    gap: 15px;
   }
 
   .installation-image {
-    width: 100%; /* Les images prennent toute la largeur de leur conteneur */
-    height: auto; /* Garde les proportions d'origine */
+    width: 100%;
+    height: auto;
+  }
+
+  .installations-title {
+    font-size: 2rem;
+  }
+
+  .installation-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .installations-description {
+    font-size: 1.1rem;
   }
 }
 
+@media (max-width: 480px) {
+  .installations-page {
+    padding: 1rem;
+  }
 
+  .installations-title {
+    font-size: 1.8rem;
+  }
+
+  .installation-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .installations-description {
+    font-size: 1rem;
+  }
+}
