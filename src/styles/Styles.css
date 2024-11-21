@@ -4,7 +4,7 @@
   --bg-light: #f5f5f5;
   --text-dark: #ffffff;
   --text-light: #333333;
-  --accent-color: #E11019;
+  --accent-color: #e11019;
   --card-dark: #444;
   --card-light: #ffffff;
 }
@@ -31,7 +31,7 @@
   padding: 4rem 2rem;
   text-align: center;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-              url('../assets/images/salle.jpg') center/cover;
+    url("../assets/images/salle.jpg") center/cover;
   position: relative;
 }
 
@@ -77,7 +77,7 @@
 
 .light-mode .discipline-tag {
   background-color: var(--bg-light);
-  color: #E11019;
+  color: #e11019;
 }
 .dark-mode .discipline-tag {
   background-color: var(--accent-color);

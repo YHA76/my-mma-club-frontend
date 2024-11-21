@@ -1,7 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, ChevronRight, Ghost, Instagram } from 'lucide-react';
-import '../styles/Footer.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  ChevronRight,
+  Ghost,
+  Instagram,
+} from "lucide-react";
+import "../styles/Footer.css";
 
 function Footer() {
   return (
@@ -11,7 +18,10 @@ function Footer() {
           <h3>Contactez-nous</h3>
           <div className="contact-item">
             <Mail className="contact-icon" size={18} />
-            <a href="mailto:MMACASBAHFIGHT.PRESIDENT@OUTLOOK.FR" className="contact-link">
+            <a
+              href="mailto:MMACASBAHFIGHT.PRESIDENT@OUTLOOK.FR"
+              className="contact-link"
+            >
               MMACASBAHFIGHT.PRESIDENT@OUTLOOK.FR
             </a>
           </div>
@@ -67,19 +77,22 @@ function Footer() {
 
         <div className="footer-section logo-section">
           <h3>MMA Casbah Fight</h3>
-          <p>Rejoignez-nous pour découvrir l'art du combat dans une ambiance conviviale et professionnelle.</p>
+          <p>
+            Rejoignez-nous pour découvrir l'art du combat dans une ambiance
+            conviviale et professionnelle.
+          </p>
           <div className="social-links">
-            <a 
-              href="https://www.snapchat.com/add/mmacasbahfight?invite_id=rCJkCARU&locale=fr_FR&share_id=RydhjjbpRVi0UUa33pOCGQ&sid=559b3f2fd9bc4ea0a21470a07e8e47f5" 
-              target="_blank" 
+            <a
+              href="https://www.snapchat.com/add/mmacasbahfight?invite_id=rCJkCARU&locale=fr_FR&share_id=RydhjjbpRVi0UUa33pOCGQ&sid=559b3f2fd9bc4ea0a21470a07e8e47f5"
+              target="_blank"
               rel="noopener noreferrer"
               className="social-link"
             >
               <Ghost size={24} />
             </a>
-            <a 
-              href="https://www.instagram.com/mmacasbahfight" 
-              target="_blank" 
+            <a
+              href="https://www.instagram.com/mmacasbahfight"
+              target="_blank"
               rel="noopener noreferrer"
               className="social-link"
             >

@@ -43,13 +43,13 @@
 }
 
 .navLink::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
   width: 0;
   height: 4px;
-  background-color: #E11019;
+  background-color: #e11019;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -61,7 +61,7 @@
 
 .navLink:hover,
 .navLink.active {
-  color: #E11019;
+  color: #e11019;
   transform: translateY(-2px);
 }
 
@@ -127,7 +127,6 @@
 .theme-toggle:hover .theme-icon {
   transform: scale(1.2); /* Légère mise en avant au survol */
 }
-
 
 @media (max-width: 968px) {
   .mobile-menu-btn {
