@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '../components/NavBar';
-import "../styles/Styles.css";
 import "../styles/Installations.css"
 import Footer from '../components/Footer.js';
 import salleImage from '../assets/images/salle.jpg';

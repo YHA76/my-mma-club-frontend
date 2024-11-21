@@ -1,14 +1,32 @@
 .gallery-page {
   padding: 40px;
-  background-color: #1e1e1e;
   min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* Thèmes pour la page */
+.dark-mode .gallery-page {
+  background: #1a1a1a;
+}
+
+.light-mode .gallery-page {
+  background: #f5f5f5;
 }
 
 .gallery-title {
   font-size: 36px;
-  color: #f5f5f5;
   text-align: center;
   margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+/* Thèmes pour le titre */
+.dark-mode .gallery-title {
+  color: #f5f5f5;
+}
+
+.light-mode .gallery-title {
+  color: #333333;
 }
 
 .gallery-container {
@@ -19,25 +37,39 @@
 
 .gallery-item {
   text-align: center;
-}
-
-.gallery-item img {
-  width: 1500px; /* Taille fixe pour les grands écrans */
-  height: 1000px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
-.gallery-item img:hover {
-  transform: scale(1.1);
+.gallery-item img {
+  width: 1500px; /* Taille fixe pour les écrans larges */
+  height: 1000px;
+  object-fit: cover; /* Garde les proportions sans déformation */
+  border-radius: 10px; /* Coins arrondis */
+  transition: all 0.3s ease; /* Animation fluide au survol */
+}
+
+/* Thèmes pour les images */
+.dark-mode .gallery-item img {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.light-mode .gallery-item img {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-description {
   font-size: 1.2rem;
-  color: #d0d0d0;
   margin-bottom: 10px;
+  transition: color 0.7s ease;
+}
+
+/* Thèmes pour les descriptions */
+.dark-mode .gallery-description {
+  color: #d0d0d0;
+}
+
+.light-mode .gallery-description {
+  color: #666666;
 }
 
 /* Media Query pour les écrans mobiles */
@@ -47,8 +79,8 @@
   }
 
   .gallery-item img {
-    width: 100%; /* Prend toute la largeur de l'écran */
-    height: auto; /* Ajuste automatiquement la hauteur */
+    width: 100%;
+    height: auto;
   }
 
   .gallery-title {
@@ -61,6 +93,10 @@
 }
 
 @media (max-width: 480px) {
+  .gallery-page {
+    padding: 20px;
+  }
+
   .gallery-title {
     font-size: 24px;
   }

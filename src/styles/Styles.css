@@ -1,21 +1,243 @@
-/* Global styles in styles.css */
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: #ffffff;
-  background-color: #333;
+/* Variables de couleurs */
+:root {
+  --bg-dark: #1a1a1a;
+  --bg-light: #f5f5f5;
+  --text-dark: #ffffff;
+  --text-light: #333333;
+  --accent-color: #E11019;
+  --card-dark: #444;
+  --card-light: #ffffff;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
+/* Main Container */
+.main-container {
+  min-height: 100vh;
+  transition: all 0.7s ease;
 }
 
-p {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  line-height: 1.6; /* Espacement pour une meilleure lisibilité */
+/* Thèmes */
+.dark-mode .main-container {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.light-mode .main-container {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('../assets/images/salle.jpg') center/cover;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  margin-bottom: 2rem;
+}
+
+.club-logo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 2rem;
+  box-shadow: 0 0 20px var(--accent-color);
+  transition: transform 0.3s ease;
+}
+
+.club-logo:hover {
+  transform: scale(1.05);
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, var(--accent-color), #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Disciplines Grid */
+.disciplines-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.light-mode .discipline-tag {
+  background-color: var(--bg-light);
+  color: #E11019;
+}
+.dark-mode .discipline-tag {
+  background-color: var(--accent-color);
+}
+
+.discipline-tag {
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.discipline-tag:hover {
+  transform: translateY(-2px);
+}
+
+/* Features Section */
+.features-section {
+  padding: 4rem 2rem;
+}
+
+.features-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode .feature-card {
+  background: var(--card-dark);
+}
+
+.light-mode .feature-card {
+  background: var(--card-light);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+/* Partners Section */
+.partners-section {
+  padding: 4rem 2rem;
+}
+
+.dark-mode .partners-section {
+  background: #121212;
+}
+
+.light-mode .partners-section {
+  background: #f0f0f0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.dark-mode .section-title {
+  color: var(--text-dark);
+}
+
+.light-mode .section-title {
+  color: var(--text-light);
+}
+
+.partners-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.partner-logo {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Location Section */
+.location-section {
+  padding: 4rem 2rem;
+}
+
+.dark-mode .location-section {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.light-mode .location-section {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.map-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.google-map {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.theme-toggle:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-logo {
+    width: 150px;
+  }
+
+  .google-map {
+    height: 300px;
+  }
 }

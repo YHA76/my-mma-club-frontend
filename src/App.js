@@ -7,9 +7,11 @@ import Seances from './views/Seances';
 import Gallery from './views/Gallery';
 import Inscription from './views/Inscription';
 import Installations from './views/Installations.js';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
+    <ThemeProvider>
     <Router>  {/* Le Router encapsule toutes les routes et le Navbar */}
       <Routes>
         <Route path="/" element={<Home />} />
@@ -20,6 +22,8 @@ function App() {
         <Route path='/installations' element={<Installations />} />
       </Routes>
     </Router>
+    </ThemeProvider>
+
   );
 }
 

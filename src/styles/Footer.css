@@ -1,5 +1,5 @@
 .footer {
-  background-color: #1D1A1A;
+  background-color: #000000;
   color: white;
   padding: 40px 20px;
   position: relative;
@@ -169,7 +169,8 @@
   }
 
   .footer-section {
-    padding: 10px;
+    text-align: center; /* Centre le contenu */
+    padding: 10px; /* Réduit le padding */
   }
 
   .footer-section h3 {
