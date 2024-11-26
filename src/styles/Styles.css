@@ -146,7 +146,7 @@
 }
 
 .light-mode .partners-section {
-  background: #f0f0f0;
+  background: #ffffff;
 }
 
 .section-title {
@@ -184,11 +184,11 @@
 }
 
 .dark-mode .location-section {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--bg-dark);
 }
 
 .light-mode .location-section {
-  background: rgba(0, 0, 0, 0.02);
+  background: var(--bg-light);
 }
 
 .map-container {

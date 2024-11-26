@@ -5,6 +5,7 @@ import Footer from "../components/Footer.js";
 import salleImage from "../assets/images/salle.jpg";
 import salleImage2 from "../assets/images/salle_2.jpg";
 import salleImage3 from "../assets/images/salle_3.jpg";
+import equipements from "../assets/images/equipement.jpg";
 
 function Installations() {
   return (
@@ -55,6 +56,11 @@ function Installations() {
           <div className="installation-images-container">
             <img
               src={salleImage3}
+              alt="Salle de combat"
+              className="installation-image"
+            />
+            <img
+              src={equipements}
               alt="Salle de combat"
               className="installation-image"
             />

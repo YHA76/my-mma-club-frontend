@@ -3,23 +3,25 @@ import Navbar from "../components/NavBar";
 import "../styles/About.css";
 import Footer from "../components/Footer.js";
 import coach1 from "../assets/images/coach_1.jpg";
+import coach2 from "../assets/images/coach_2.jpg";
+import coach3 from "../assets/images/coach_3.jpg";
 
 function About() {
   const coachs = [
     {
       name: "Coach 1",
-      description: "Spécialiste du Muay Thai.",
+      description: "Entraineur de lutte, 7 fois champion en Thechenie.",
       picture: coach1,
     },
     {
       name: "Coach 2",
       description: "Expert en Jiu-Jitsu Brésilien.",
-      picture: coach1,
+      picture: coach2,
     },
     {
       name: "Coach 3",
       description: "Champion régional de boxe.",
-      picture: coach1,
+      picture: coach3,
     },
     {
       name: "Coach 4",
