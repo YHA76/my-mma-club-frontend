@@ -2,10 +2,13 @@ import React from "react";
 import Navbar from "../components/NavBar";
 import "../styles/Installations.css";
 import Footer from "../components/Footer.js";
-import salleImage from "../assets/images/salle.jpg";
-import salleImage2 from "../assets/images/salle_2.jpg";
-import salleImage3 from "../assets/images/salle_3.jpg";
+import salleImage from "../assets/images/salle.webp";
+import salleImage2 from "../assets/images/salle_2.webp";
+import salleImage3 from "../assets/images/salle_3.webp";
+import salleImage4 from "../assets/images/salle_4.jpg";
 import equipements from "../assets/images/equipement.jpg";
+import exterieur from "../assets/images/exterieur_1.jpg";
+import exterieur2 from "../assets/images/exterieur_2.jpg";
 
 function Installations() {
   return (
@@ -34,11 +37,19 @@ function Installations() {
               src={salleImage}
               alt="Salle de combat"
               className="installation-image"
+              loading="lazy"
             />
             <img
               src={salleImage2}
               alt="Salle de combat"
               className="installation-image"
+              loading="lazy"
+            />
+            <img
+              src={salleImage4}
+              alt="Salle de combat"
+              className="installation-image"
+              loading="lazy"
             />
           </div>
         </section>
@@ -56,13 +67,15 @@ function Installations() {
           <div className="installation-images-container">
             <img
               src={salleImage3}
-              alt="Salle de combat"
+              alt="installation"
               className="installation-image"
+              loading="lazy"
             />
             <img
               src={equipements}
-              alt="Salle de combat"
+              alt="installation"
               className="installation-image"
+              loading="lazy"
             />
           </div>
         </section>
@@ -76,11 +89,20 @@ function Installations() {
             physique en groupe, apportant un environnement naturel et varié pour
             les séances de renforcement physique.
           </p>
-          <img
-            src="/path/to/outdoor-training.jpg"
-            alt="Entraînement extérieur"
-            className="installation-image"
-          />
+          <div className="installation-images-container">
+            <img
+              src={exterieur}
+              alt="Entraînement extérieur"
+              className="installation-image"
+              loading="lazy"
+            />
+            <img
+              src={exterieur2}
+              alt="Entraînement extérieur"
+              className="installation-image"
+              loading="lazy"
+            />
+          </div>
         </section>
       </div>
       <Footer />

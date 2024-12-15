@@ -12,7 +12,6 @@ function Gallery() {
       src: require("../assets/images/picture_3.JPG"),
       description: (
         <>
-          {" "}
           Stage avec Benoît Saint-Denis dans notre salle : <br /> 18/12/2023
         </>
       ),
@@ -21,9 +20,8 @@ function Gallery() {
       src: require("../assets/images/picture_2.jpg"),
       description: (
         <>
-          {" "}
           Première séance avec notre coach de MMA et lutte ​Ibrahim et son ami
-          Islam champion de Grappling : <br /> 10/11/2023{" "}
+          Islam champion de Grappling : <br /> 10/11/2023
         </>
       ),
     },
@@ -31,9 +29,8 @@ function Gallery() {
       src: require("../assets/images/picture_1.jpeg"),
       description: (
         <>
-          {" "}
           remier entraînement depuis la reprise, avec Yazid notre coach de Muay
-          thaï et Striking : <br /> 11/11/2023{" "}
+          thaï et Striking : <br /> 11/11/2023
         </>
       ),
     },
@@ -54,6 +51,7 @@ function Gallery() {
                 alt={`Description ${index + 1}`}
                 whileTap={{ scale: 0.95 }} /* Rétrécissement au clic */
                 transition={{ duration: 0.3 }} /* Durée de la transition */
+                loading="lazy"
               />
             </div>
           ))}

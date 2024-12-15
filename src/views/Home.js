@@ -76,10 +76,20 @@ function Home() {
         <h2 className="section-title">Nos Partenaires</h2>
         <div className="partners-grid">
           <div className="partner-card">
-            <img src={partner1} alt="FMMAF" className="partner-logo" />
+            <img
+              src={partner1}
+              alt="FMMAF"
+              className="partner-logo"
+              loading="lazy"
+            />
           </div>
           <div className="partner-card">
-            <img src={partner2} alt="Ville de Rouen" className="partner-logo" />
+            <img
+              src={partner2}
+              alt="Ville de Rouen"
+              className="partner-logo"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>

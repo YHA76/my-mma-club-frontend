@@ -8,15 +8,15 @@ function Inscription() {
   // Tableau d'images et de descriptions
   const pages = [
     {
-      src: require("../assets/images/Licence-2025-MMA-1.jpg"),
+      src: require("../assets/images/Licence-2025-MMA-1.webp"),
       description: "Première page du formulaire d'inscription",
     },
     {
-      src: require("../assets/images/Licence-2025-MMA-2.jpg"),
+      src: require("../assets/images/Licence-2025-MMA-2.webp"),
       description: "Deuxième page du formulaire d'inscription",
     },
     {
-      src: require("../assets/images/Licence-2025-MMA-3.jpg"),
+      src: require("../assets/images/Licence-2025-MMA-3.webp"),
       description: "Troisième page du formulaire d'inscription",
     },
   ];
@@ -34,13 +34,15 @@ function Inscription() {
                 src={page.src}
                 alt={`Page ${index + 1} du formulaire d'inscription`}
                 className="pdf-image"
+                width="600"
+                height="800"
               />
               <p className="pdf-description">{page.description}</p>
             </div>
           ))}
         </div>
         <a
-          href="../assets/pdf/Licence_2025_MMA.pdf"
+          href={`${process.env.PUBLIC_URL}/assets/pdf/Licence_2025_MMA.pdf`}
           download="Licence_2025_MMA.pdf"
           className="download-button"
         >

@@ -83,6 +83,7 @@ function About() {
                     src={coach.picture}
                     alt={coach.name}
                     className="coach-photo"
+                    loading="lazy"
                   />
                   <h3 className="coach-name">{coach.name}</h3>
                   <p className="coach-description">{coach.description}</p>

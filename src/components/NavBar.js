@@ -24,7 +24,7 @@ function Navbar() {
     { path: "/about", label: "Qui nous sommes" },
     { path: "/seances", label: "Séances" },
     { path: "/installations", label: "Installations" },
-    { path: "/gallery", label: "Galeries" },
+    { path: "/gallery", label: "Galerie" },
     { path: "/inscription", label: "Inscription" },
   ];
 

@@ -8,11 +8,13 @@ import Gallery from "./views/Gallery";
 import Inscription from "./views/Inscription";
 import Installations from "./views/Installations.js";
 import { ThemeProvider } from "./context/ThemeContext";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <ThemeProvider>
       <Router>
+        <ScrollToTop />
         {/* Le Router encapsule toutes les routes et le Navbar */}
         <Routes>
           <Route path="/" element={<Home />} />
