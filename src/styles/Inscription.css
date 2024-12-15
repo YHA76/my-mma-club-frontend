@@ -1,140 +1,141 @@
 .inscription-page {
-    padding: 40px;
-    min-height: 100vh;
-    transition: all 0.3s ease;
+  padding: 40px;
+  min-height: 100vh;
+  transition: all 0.7s ease;
 }
 
 /* Thèmes pour la page */
 .dark-mode .inscription-page {
-    background-color: #1a1a1a;
+  background-color: #1a1a1a;
 }
 
 .light-mode .inscription-page {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 .inscription-title {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 20px;
-    transition: color 0.3s ease;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
 }
 
 /* Thèmes pour le titre */
 .dark-mode .inscription-title {
-    color: #f5f5f5;
+  color: #f5f5f5;
 }
 
 .light-mode .inscription-title {
-    color: #333333;
+  color: #333333;
 }
 
 .pdf-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  color: #e11019;
 }
 
 .pdf-gallery-item {
-    flex: 1;
-    min-width: 250px;
-    max-width: 33%;
-    text-align: center;
-    transition: transform 0.3s ease;
+  flex: 1;
+  min-width: 250px;
+  max-width: 33%;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
 .pdf-gallery-item:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .pdf-image {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    padding: 1px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  padding: 1px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 /* Thèmes pour les images PDF */
 .dark-mode .pdf-image {
-    border: 1px solid #333;
-    background-color: #2d2d2d;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid #333;
+  background-color: #2d2d2d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .light-mode .pdf-image {
-    border: 1px solid #ddd;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .pdf-description {
-    margin-top: 10px;
-    transition: color 0.3s ease;
+  margin-top: 10px;
+  transition: color 0.3s ease;
 }
 
 /* Thèmes pour les descriptions */
 .dark-mode .pdf-description {
-    color: #f5f5f5;
+  color: #f5f5f5;
 }
 
 .light-mode .pdf-description {
-    color: #333333;
+  color: #333333;
 }
 
 .download-button {
-    display: block;
-    margin: 2rem auto;
-    padding: 0.8rem 1.5rem;
-    background-color: #E11019;
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    transition: all 0.3s ease;
+  display: block;
+  margin: 2rem auto;
+  padding: 0.8rem 1.5rem;
+  background-color: #e11019;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
 .download-button:hover {
-    background-color: #c10e17;
-    text-decoration: underline;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(225, 16, 25, 0.3);
+  background-color: #c10e17;
+  text-decoration: underline;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(225, 16, 25, 0.3);
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .inscription-page {
-        padding: 20px;
-    }
-    
-    .pdf-gallery {
-        flex-direction: column;
-    }
-    
-    .pdf-gallery-item {
-        max-width: 100%;
-    }
+  .inscription-page {
+    padding: 20px;
+  }
 
-    .inscription-title {
-        font-size: 28px;
-    }
+  .pdf-gallery {
+    flex-direction: column;
+  }
+
+  .pdf-gallery-item {
+    max-width: 100%;
+  }
+
+  .inscription-title {
+    font-size: 28px;
+  }
 }
 
 @media (max-width: 480px) {
-    .inscription-page {
-        padding: 15px;
-    }
+  .inscription-page {
+    padding: 15px;
+  }
 
-    .inscription-title {
-        font-size: 24px;
-    }
+  .inscription-title {
+    font-size: 24px;
+  }
 
-    .download-button {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-    }
+  .download-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
 }

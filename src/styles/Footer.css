@@ -7,13 +7,13 @@
 }
 
 .footer::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #E11019, #ff4d4d);
+  background: linear-gradient(90deg, #e11019, #ff4d4d);
 }
 
 .footer-content {
@@ -43,13 +43,13 @@
 }
 
 .footer-section h3::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 50px;
   height: 3px;
-  background: #E11019;
+  background: #e11019;
 }
 
 .contact-item {
@@ -60,7 +60,7 @@
 }
 
 .contact-icon {
-  color: #E11019;
+  color: #e11019;
   min-width: 24px;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .contact-link:hover {
-  color: #E11019;
+  color: #e11019;
 }
 
 .main-links ul {
@@ -99,7 +99,7 @@
 }
 
 .main-links ul li a:hover {
-  color: #E11019;
+  color: #e11019;
 }
 
 .logo-section p {
@@ -122,7 +122,7 @@
 }
 
 .social-link:hover {
-  color: #E11019;
+  color: #e11019;
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-3px);
 }
@@ -140,7 +140,7 @@
 .credits {
   margin-top: 5px;
   font-style: italic;
-  color: #E11019;
+  color: #e11019;
 }
 
 /* Responsive adjustments */

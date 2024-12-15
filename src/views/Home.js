@@ -1,42 +1,48 @@
-import React from 'react';
-import Navbar from '../components/NavBar';
+import React from "react";
+import Navbar from "../components/NavBar";
 import "../styles/Styles.css";
-import Footer from '../components/Footer.js';
-import logo from '../assets/images/logo.jpg'; 
-import partner1 from '../assets/images/FMMAF.webp'; 
-import partner2 from '../assets/images/rouen.webp';
-import { Trophy, Users, MapPin } from 'lucide-react';
+import Footer from "../components/Footer.js";
+import logo from "../assets/images/logo.jpg";
+import partner1 from "../assets/images/FMMAF.webp";
+import partner2 from "../assets/images/rouen.webp";
+import { Trophy, Users, MapPin } from "lucide-react";
 
 function Home() {
   const disciplines = [
-    'MMA', 'BOXE', 'LUTTE', 'GRAPPLING', 
-    'JJB', 'SAMBO', 'MUAY-THAI', 'KICKBOXING'
+    "MMA",
+    "BOXE",
+    "LUTTE",
+    "GRAPPLING",
+    "JJB",
+    "SAMBO",
+    "MUAY-THAI",
+    "KICKBOXING",
   ];
 
   const features = [
     {
       icon: <Trophy className="feature-icon" />,
       title: "Excellence",
-      description: "Formation de qualité par des experts"
+      description: "Formation de qualité par des experts",
     },
     {
       icon: <Users className="feature-icon" />,
       title: "Communauté",
-      description: "Rejoignez une famille de passionnés"
+      description: "Rejoignez une famille de passionnés",
     },
     {
       icon: <MapPin className="feature-icon" />,
       title: "Accessibilité",
-      description: "Arrêt de bus et parking à proximité du club"
-    }
+      description: "Arrêt de bus et parking à proximité du club",
+    },
   ];
 
   return (
     <div className="main-container">
       <Navbar />
-      
+
       {/* Hero Section */}
-      <section className="hero-section" style={{ paddingTop: '90px' }}>
+      <section className="hero-section" style={{ paddingTop: "90px" }}>
         <div className="hero-content">
           <div className="logo-container">
             <img src={logo} alt="Logo du club" className="club-logo" />
@@ -70,10 +76,20 @@ function Home() {
         <h2 className="section-title">Nos Partenaires</h2>
         <div className="partners-grid">
           <div className="partner-card">
-            <img src={partner1} alt="FMMAF" className="partner-logo" />
+            <img
+              src={partner1}
+              alt="FMMAF"
+              className="partner-logo"
+              loading="lazy"
+            />
           </div>
           <div className="partner-card">
-            <img src={partner2} alt="Ville de Rouen" className="partner-logo" />
+            <img
+              src={partner2}
+              alt="Ville de Rouen"
+              className="partner-logo"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>

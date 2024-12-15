@@ -8,11 +8,8 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "framer-motion": "^11.11.9",
     "lucide-react": "^0.456.0",
-    "nth-check": "^2.0.1",
-    "postcss": "^8.4.31",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0",
@@ -23,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:fix": "eslint . --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -42,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "typescript-eslint": "^8.15.0"
   }
 }
