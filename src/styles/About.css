@@ -160,3 +160,32 @@
 .light-mode .coach-description {
   color: #666666;
 }
+
+.before-after-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.before-after-image {
+  width: 65%;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .before-after-container {
+    flex-direction: column; /* Affiche les images en colonne sur mobile */
+    gap: 1.5rem; /* Espace entre les images */
+  }
+
+  .before-after-image {
+    width: 260px; /* Réduit la largeur sur mobile */
+    height: 200px;
+    margin: 0 auto; /* Centre les images */
+  }
+}

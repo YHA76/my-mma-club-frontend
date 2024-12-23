@@ -5,44 +5,47 @@ import Footer from "../components/Footer.js";
 import coach1 from "../assets/images/coach_1.jpg";
 import coach2 from "../assets/images/coach_2.jpg";
 import coach3 from "../assets/images/coach_3.jpg";
+import president from "../assets/images/president.png";
+import after from "../assets/images/salle.webp";
+import before from "../assets/images/Ancienne_salle.jpg";
 
 function About() {
   const coachs = [
     {
-      name: "Coach 1",
-      description: "Entraineur de lutte, 7 fois champion en Thechenie.",
+      name: "Président du club",
+      description: "",
+      picture: president,
+    },
+    {
+      name: "Coach Lutte et MMA",
+      description: "7 fois champion de lutte en Thechenie",
       picture: coach1,
     },
     {
-      name: "Coach 2",
-      description: "Expert en Jiu-Jitsu Brésilien.",
+      name: "Coach Muay thai",
+      description: "Champion Muy thai",
       picture: coach2,
     },
     {
-      name: "Coach 3",
+      name: "Coach Boxe anglaise",
       description: "Champion régional de boxe.",
       picture: coach3,
     },
-    {
-      name: "Coach 4",
-      description: "Entraîneur de lutte olympique.",
-      picture: coach1,
-    },
-    {
-      name: "Coach 5",
-      description: "Spécialiste en MMA et conditioning.",
-      picture: coach1,
-    },
-    {
-      name: "Coach 6",
-      description: "Formateur en kickboxing.",
-      picture: coach1,
-    },
-    {
-      name: "Coach 7",
-      description: "Préparateur physique et nutritionniste.",
-      picture: coach1,
-    },
+    // {
+    //   name: "Coach 5",
+    //   description: "Spécialiste en MMA et conditioning.",
+    //   picture: coach1,
+    // },
+    // {
+    //   name: "Coach 6",
+    //   description: "Formateur en kickboxing.",
+    //   picture: coach1,
+    // },
+    // {
+    //   name: "Coach 7",
+    //   description: "Préparateur physique et nutritionniste.",
+    //   picture: coach1,
+    // },
   ];
   return (
     <div>
@@ -72,10 +75,23 @@ function About() {
               jeunes/habitants du quartier et le soutien de la ville que nous
               avons pu ouvrir cette salle de MMA en novembre 2023.
             </p>
+            {/* Images avant/après */}
+            <div className="before-after-container">
+              <img
+                src={before}
+                alt="Salle avant rénovation"
+                className="before-after-image"
+              />
+              <img
+                src={after}
+                alt="Salle après rénovation"
+                className="before-after-image"
+              />
+            </div>
           </section>
           {/* Section Descriptif des Coachs */}
           <section className="coachs-section">
-            <h2 className="coachs-title">Nos Coachs</h2>
+            <h2 className="coachs-title">Notre Staff et Coachs</h2>
             <div className="coachs-grid">
               {coachs.map((coach, index) => (
                 <div className="coach-card" key={index}>
