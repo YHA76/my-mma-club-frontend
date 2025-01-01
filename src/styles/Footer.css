@@ -153,7 +153,7 @@
   color: #e11019;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
   .footer {
     padding: 30px 15px;
