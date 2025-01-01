@@ -23,7 +23,7 @@ function About() {
     },
     {
       name: "Coach Muay thai",
-      description: "Champion Muy thai",
+      description: "Vice champion du monde amateur",
       picture: coach2,
     },
     {
