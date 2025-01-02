@@ -139,6 +139,7 @@
 /* Partners Section */
 .partners-section {
   padding: 4rem 2rem;
+  transition: all 0.7s ease;
 }
 
 .dark-mode .partners-section {
@@ -181,6 +182,7 @@
 /* Location Section */
 .location-section {
   padding: 4rem 2rem;
+  transition: all 0.7s ease;
 }
 
 .dark-mode .location-section {
