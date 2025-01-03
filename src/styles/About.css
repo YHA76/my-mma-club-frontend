@@ -170,8 +170,22 @@
 }
 
 .before-after-image {
-  width: 65%;
-  height: 300px;
+  max-width: 45%; /* Ajuste selon la taille souhaitée */
+  height: auto; /* Laisse l'image garder ses proportions */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.before-after-image {
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
