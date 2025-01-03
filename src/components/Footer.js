@@ -33,9 +33,14 @@ function Footer() {
           </div>
           <div className="contact-item">
             <MapPin className="contact-icon" size={18} />
-            <span className="contact-link">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=102+Av.+de+la+Grand%27mare%2C+76000+Rouen"
+              className="contact-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Maison du plateau Pl. du châtelet, 76000 Rouen
-            </span>
+            </a>
           </div>
         </div>
 
