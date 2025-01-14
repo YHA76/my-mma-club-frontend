@@ -29,7 +29,7 @@ function Gallery() {
       src: require("../assets/images/picture_1.jpeg"),
       description: (
         <>
-          remier entraînement depuis la reprise, avec Yazid notre coach de Muay
+          Premier entraînement depuis la reprise, avec Yazid notre coach de Muay
           thaï et Striking : <br /> 11/11/2023
         </>
       ),
