@@ -77,16 +77,20 @@ function About() {
             </p>
             {/* Images avant/après */}
             <div className="before-after-container">
-              <img
-                src={before}
-                alt="Salle avant rénovation"
-                className="before-after-image"
-              />
-              <img
-                src={after}
-                alt="Salle après rénovation"
-                className="before-after-image"
-              />
+              <div className="image-wrapper">
+                <img
+                  src={before}
+                  alt="Salle avant rénovation"
+                  className="before-after-image"
+                />
+              </div>
+              <div className="image-wrapper">
+                <img
+                  src={after}
+                  alt="Salle après rénovation"
+                  className="before-after-image"
+                />
+              </div>
             </div>
           </section>
           {/* Section Descriptif des Coachs */}
