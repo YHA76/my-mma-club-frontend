@@ -9,6 +9,7 @@ import Inscription from "./views/Inscription";
 import Installations from "./views/Installations.js";
 import { ThemeProvider } from "./context/ThemeContext";
 import ScrollToTop from "./components/ScrollToTop";
+import NotFound from "./views/NotFound";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/inscription" element={<Inscription />} />
           <Route path="/installations" element={<Installations />} />
+          <Route path="*" element={<NotFound />} /> {/*error 404*/}
         </Routes>
       </Router>
     </ThemeProvider>
