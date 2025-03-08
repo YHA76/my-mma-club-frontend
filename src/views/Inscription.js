@@ -3,6 +3,7 @@ import Navbar from "../components/NavBar.js";
 import "../styles/Styles.css";
 import "../styles/Inscription.css";
 import Footer from "../components/Footer.js";
+import InscriptionForm from "../components/InscriptionForm";
 
 function Inscription() {
   // Tableau d'images et de descriptions
@@ -49,6 +50,8 @@ function Inscription() {
           Télécharger le formulaire
         </a>
       </div>
+      {/* Formulaire d'inscription */}
+      <InscriptionForm />
 
       <Footer />
     </div>
