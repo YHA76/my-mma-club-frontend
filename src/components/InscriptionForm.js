@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "../styles/InscriptionForm.css";
+import "../styles/Styles.css";
 
 function InscriptionForm() {
   const [formData, setFormData] = useState({
@@ -10,17 +12,17 @@ function InscriptionForm() {
     email: "",
   });
 
-  const [message, setMessage] = useState(""); // Message de confirmation ou d'erreur
+  const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  // Gérer les changements de champ
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Envoyer les données au serveur
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setMessage("Envoi en cours...");
+    setIsLoading(true);
+    setMessage("");
 
     try {
       const response = await fetch("http://localhost:5000/api/inscription", {
@@ -37,58 +39,111 @@ function InscriptionForm() {
       }
     } catch (error) {
       setMessage("Erreur de connexion au serveur.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
-    <div>
-      <h2>Formulaire d'Inscription</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="nom"
-          placeholder="Nom"
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="text"
-          name="prenom"
-          placeholder="Prénom"
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="text"
-          name="photo"
-          placeholder="Photo (URL ou fichier)"
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="number"
-          name="age"
-          placeholder="Âge"
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="text"
-          name="moyenPaiement"
-          placeholder="Moyen de paiement"
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          onChange={handleChange}
-          required
-        />
-        <button type="submit">S'inscrire</button>
-      </form>
-      {message && <p>{message}</p>}
+    <div className="inscription-form-section">
+      <div className="inscription-form-container">
+        <h2 className="inscription-form-title">Formulaire d'Inscription</h2>
+
+        <form className="inscription-form" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <input
+              className="form-input"
+              type="text"
+              name="nom"
+              placeholder="Nom"
+              value={formData.nom}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <input
+              className="form-input"
+              type="text"
+              name="prenom"
+              placeholder="Prénom"
+              value={formData.prenom}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <input
+              className="form-input"
+              type="text"
+              name="photo"
+              placeholder="Photo (URL ou fichier)"
+              value={formData.photo}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <input
+              className="form-input"
+              type="number"
+              name="age"
+              placeholder="Âge"
+              value={formData.age}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <input
+              className="form-input"
+              type="text"
+              name="moyenPaiement"
+              placeholder="Moyen de paiement"
+              value={formData.moyenPaiement}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <input
+              className="form-input"
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <button className="submit-button" type="submit" disabled={isLoading}>
+            {isLoading ? (
+              <>
+                Envoi en cours
+                <span className="loading"></span>
+              </>
+            ) : (
+              "S'inscrire"
+            )}
+          </button>
+        </form>
+
+        {message && (
+          <div
+            className={`form-message ${
+              message.includes("succès") ? "message-success" : "message-error"
+            }`}
+          >
+            {message}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

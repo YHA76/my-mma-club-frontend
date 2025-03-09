@@ -1,0 +1,200 @@
+.dark-mode .inscription-form-section {
+  background-color: #1a1a1a !important;
+}
+
+.light-mode .inscription-form-section {
+  background-color: #f5f5f5 !important;
+}
+/* Container du formulaire */
+.inscription-form-container {
+  max-width: 800px;
+  margin: 120px auto 40px;
+  padding: 2rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Thèmes pour le container */
+.dark-mode .inscription-form-container {
+  background: rgb(0, 0, 0) !important;
+  color: #f5f5f5;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.light-mode .inscription-form-container {
+  background: #ffffff !important;
+  color: #333333;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre du formulaire */
+.inscription-form-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #e11019, #ff4d4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.inscription-form-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #e11019, #ff4d4d);
+  border-radius: 2px;
+}
+
+/* Formulaire */
+.inscription-form {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Champs de formulaire */
+.form-group {
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Thèmes pour les inputs */
+.dark-mode .form-input {
+  background: #1a1a1a !important;
+  color: #f5f5f5;
+}
+
+.light-mode .form-input {
+  background: #f5f5f5 !important;
+  color: #333333;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #e11019;
+  box-shadow: 0 0 0 3px rgba(225, 16, 25, 0.2);
+}
+
+.form-input::placeholder {
+  color: #999;
+}
+
+/* Bouton d'envoi */
+.submit-button {
+  background: linear-gradient(90deg, #e11019, #ff4d4d);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.submit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(225, 16, 25, 0.3);
+}
+
+.submit-button:active {
+  transform: translateY(-1px);
+}
+
+/* Message de confirmation/erreur */
+.form-message {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.message-success {
+  background: rgba(39, 174, 96, 0.2);
+  color: #27ae60;
+}
+
+.message-error {
+  background: rgba(225, 16, 25, 0.2);
+  color: #e11019;
+}
+
+/* Animation de chargement */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spin 1s ease-in-out infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .inscription-form-container {
+    margin: 100px 20px 40px;
+    padding: 1.5rem;
+  }
+
+  .inscription-form-title {
+    font-size: 1.8rem;
+  }
+
+  .form-input {
+    padding: 0.8rem 1.2rem;
+  }
+
+  .submit-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .inscription-form-container {
+    margin: 80px 15px 30px;
+    padding: 1rem;
+  }
+
+  .inscription-form-title {
+    font-size: 1.5rem;
+  }
+
+  .form-input {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
