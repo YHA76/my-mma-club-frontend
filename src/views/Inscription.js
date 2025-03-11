@@ -26,7 +26,7 @@ function Inscription() {
     <div>
       <Navbar />
       <div className="inscription-page" style={{ paddingTop: "90px" }}>
-        <h1 className="inscription-title">Formulaire d'Inscription</h1>
+        <h1 className="inscription-title">Fiche d'Inscription</h1>
         {/* Affichage des images sous forme de galerie */}
         <div className="pdf-gallery">
           {pages.map((page, index) => (

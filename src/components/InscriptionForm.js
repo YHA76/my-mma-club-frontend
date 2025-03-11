@@ -98,17 +98,20 @@ function InscriptionForm() {
             />
           </div>
 
-          <div className="form-group">
-            <input
-              className="form-input"
-              type="text"
-              name="moyenPaiement"
-              placeholder="Moyen de paiement"
-              value={formData.moyenPaiement}
-              onChange={handleChange}
-              required
-            />
-          </div>
+          <select
+            id="moyenPaiement"
+            name="moyenPaiement"
+            className="form-input"
+            value={formData.moyenPaiement}
+            onChange={handleChange}
+            required
+          >
+            <option value="" disabled hidden>
+              Sélectionnez un moyen de paiement
+            </option>
+            <option value="Carte bancaire">Carte bancaire</option>
+            <option value="Espèce">Espèce</option>
+          </select>
 
           <div className="form-group">
             <input

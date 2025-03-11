@@ -1,3 +1,8 @@
+.inscription-form-section {
+  padding: 4rem 0;
+  transition: all 0.7s ease;
+}
+
 .dark-mode .inscription-form-section {
   background-color: #1a1a1a !important;
 }
@@ -8,10 +13,10 @@
 /* Container du formulaire */
 .inscription-form-container {
   max-width: 800px;
-  margin: 120px auto 40px;
+  margin: auto;
   padding: 2rem;
   border-radius: 15px;
-  transition: all 0.3s ease;
+  transition: all 0.7s ease;
 }
 
 /* Thèmes pour le container */
@@ -66,22 +71,26 @@
 
 .form-input {
   width: 100%;
+  /* max-width: 850px; */
   padding: 1rem 1.5rem;
   border: 2px solid transparent;
   border-radius: 8px;
   font-size: 1rem;
   transition: all 0.3s ease;
+  background: #fff;
+  color: #333;
+  box-sizing: border-box;
 }
 
 /* Thèmes pour les inputs */
 .dark-mode .form-input {
-  background: #1a1a1a !important;
+  background: #333 !important;
   color: #f5f5f5;
 }
 
 .light-mode .form-input {
   background: #f5f5f5 !important;
-  color: #333333;
+  color: #333;
 }
 
 .form-input:focus {
@@ -104,7 +113,7 @@
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.7s ease;
   margin-top: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -126,7 +135,7 @@
   margin-top: 1rem;
   border-radius: 8px;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: all 0.7s ease;
 }
 
 .message-success {
@@ -191,6 +200,7 @@
   .form-input {
     padding: 0.7rem 1rem;
     font-size: 0.9rem;
+    max-width: 90%;
   }
 
   .submit-button {
