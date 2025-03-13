@@ -3,6 +3,7 @@ import Navbar from "../components/NavBar.js";
 import "../styles/Styles.css";
 import "../styles/Inscription.css";
 import Footer from "../components/Footer.js";
+import InscriptionForm from "../components/InscriptionForm";
 
 function Inscription() {
   // Tableau d'images et de descriptions
@@ -25,7 +26,7 @@ function Inscription() {
     <div>
       <Navbar />
       <div className="inscription-page" style={{ paddingTop: "90px" }}>
-        <h1 className="inscription-title">Formulaire d'Inscription</h1>
+        <h1 className="inscription-title">Fiche d'Inscription</h1>
         {/* Affichage des images sous forme de galerie */}
         <div className="pdf-gallery">
           {pages.map((page, index) => (
@@ -49,6 +50,8 @@ function Inscription() {
           Télécharger le formulaire
         </a>
       </div>
+      {/* Formulaire d'inscription */}
+      <InscriptionForm />
 
       <Footer />
     </div>
