@@ -146,7 +146,7 @@ function InscriptionForm() {
           {/* reCAPTCHA */}
           <div className="form-group">
             <ReCAPTCHA
-              sitekey="6LcspvEqAAAAALb8HefCv0BzbtrqZ_e3obSRAY82"
+              sitekey="6Lf-ePMqAAAAAFgOhjbExJ3WEqBMED1krDKin2Rw"
               onChange={handleCaptchaChange}
               size="normal"
               theme="light"
