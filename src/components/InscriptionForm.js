@@ -7,24 +7,80 @@ function InscriptionForm() {
   const [formData, setFormData] = useState({
     nom: "",
     prenom: "",
-    photo: "",
+    photo: null, // Stocker la photo sous forme de fichier
     age: "",
     moyenPaiement: "",
     email: "",
   });
 
+  const [photoPreview, setPhotoPreview] = useState(null);
+  const [photoError, setPhotoError] = useState("");
   const [captchaToken, setCaptchaToken] = useState("");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState(0);
 
-  // Fonction pour gérer le changement des inputs
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
+  const validateAge = (age) => {
+    const ageNum = parseInt(age);
+    return ageNum >= 16 && ageNum <= 100;
+  };
+
+  // Fonction pour gérer le changement des inputs texte
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+
+    // Validation en temps réel
+    if (name === "email" && value && !validateEmail(value)) {
+      setMessage("Veuillez entrer une adresse email valide.");
+    } else if (name === "age" && value && !validateAge(value)) {
+      setMessage("L'âge doit être compris entre 16 et 100 ans.");
+    } else {
+      setMessage("");
+    }
+  };
+
+  // Fonction pour gérer le changement du fichier photo
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setPhotoError("");
+    setMessage("");
+
+    // Validation de la taille (max 5MB)
+    if (file && file.size > 5 * 1024 * 1024) {
+      setPhotoError("La photo ne doit pas dépasser 5MB");
+      return;
+    }
+
+    // Validation du type de fichier
+    if (file && !file.type.startsWith("image/")) {
+      setPhotoError("Le fichier doit être une image");
+      return;
+    }
+
+    setFormData({ ...formData, photo: file });
+
+    // Création de la prévisualisation
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setPhotoPreview(reader.result);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      setPhotoPreview(null);
+    }
   };
 
   // Fonction pour gérer la validation du reCAPTCHA
   const handleCaptchaChange = (token) => {
     setCaptchaToken(token);
+    setMessage("");
   };
 
   // Fonction pour soumettre le formulaire
@@ -32,6 +88,20 @@ function InscriptionForm() {
     e.preventDefault();
     setIsLoading(true);
     setMessage("");
+    setUploadProgress(0);
+
+    // Validation complète avant envoi
+    if (!validateEmail(formData.email)) {
+      setMessage("Veuillez entrer une adresse email valide.");
+      setIsLoading(false);
+      return;
+    }
+
+    if (!validateAge(formData.age)) {
+      setMessage("L'âge doit être compris entre 16 et 100 ans.");
+      setIsLoading(false);
+      return;
+    }
 
     if (!captchaToken) {
       setMessage("Veuillez valider le CAPTCHA.");
@@ -39,24 +109,59 @@ function InscriptionForm() {
       return;
     }
 
+    if (!formData.photo) {
+      setMessage("Veuillez sélectionner une photo.");
+      setIsLoading(false);
+      return;
+    }
+
+    if (photoError) {
+      setMessage(photoError);
+      setIsLoading(false);
+      return;
+    }
+
+    const formDataToSend = new FormData();
+    for (const key in formData) {
+      formDataToSend.append(key, formData[key]);
+    }
+    formDataToSend.append("captchaToken", captchaToken);
+
     try {
       const response = await fetch("http://localhost:5000/api/inscription", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, captchaToken }),
+        body: formDataToSend,
+        onUploadProgress: (progressEvent) => {
+          const progress = Math.round(
+            (progressEvent.loaded * 100) / progressEvent.total
+          );
+          setUploadProgress(progress);
+        },
       });
 
-      const data = await response.json();
-
-      if (response.ok) {
-        setMessage("✅ Inscription envoyée avec succès !");
-      } else {
-        setMessage(`❌ Erreur : ${data.error || "Une erreur est survenue."}`);
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Erreur lors de l'inscription");
       }
+
+      const data = await response.json();
+      setMessage(data.message);
+      // Réinitialiser le formulaire en cas de succès
+      setFormData({
+        nom: "",
+        prenom: "",
+        photo: null,
+        age: "",
+        moyenPaiement: "",
+        email: "",
+      });
+      setPhotoPreview(null);
+      setCaptchaToken("");
     } catch (error) {
-      setMessage("❌ Erreur de connexion au serveur.");
+      setMessage(error.message || "Erreur de connexion au serveur.");
     } finally {
       setIsLoading(false);
+      setUploadProgress(0);
     }
   };
 
@@ -93,23 +198,13 @@ function InscriptionForm() {
           <div className="form-group">
             <input
               className="form-input"
-              type="text"
-              name="photo"
-              placeholder="Photo (URL ou fichier)"
-              value={formData.photo}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <input
-              className="form-input"
               type="number"
               name="age"
               placeholder="Âge"
               value={formData.age}
               onChange={handleChange}
+              min="16"
+              max="100"
               required
             />
           </div>
@@ -143,17 +238,56 @@ function InscriptionForm() {
             />
           </div>
 
-          {/* reCAPTCHA */}
+          <div className="form-group">
+            <input
+              className="form-input"
+              type="file"
+              accept="image/*"
+              onChange={handleFileChange}
+              required
+            />
+            <small className="form-help">
+              Formats acceptés : JPG, PNG, GIF. Taille maximale : 5MB
+            </small>
+          </div>
+
+          {photoPreview && (
+            <div className="photo-preview">
+              <img
+                src={photoPreview}
+                alt="Aperçu"
+                style={{
+                  maxWidth: "200px",
+                  maxHeight: "200px",
+                  objectFit: "cover",
+                }}
+              />
+            </div>
+          )}
+
+          {photoError && <div className="error-message">{photoError}</div>}
+
           <div className="form-group">
             <ReCAPTCHA
-              sitekey="6Lf-ePMqAAAAAFgOhjbExJ3WEqBMED1krDKin2Rw"
+              sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
               onChange={handleCaptchaChange}
               size="normal"
               theme="light"
             />
           </div>
 
-          {/* Bouton d'envoi avec loader */}
+          {uploadProgress > 0 && uploadProgress < 100 && (
+            <div className="upload-progress">
+              <div className="progress-bar">
+                <div
+                  className="progress-fill"
+                  style={{ width: `${uploadProgress}%` }}
+                ></div>
+              </div>
+              <span className="progress-text">{uploadProgress}%</span>
+            </div>
+          )}
+
           <button className="submit-button" type="submit" disabled={isLoading}>
             {isLoading ? "⏳ Envoi en cours..." : "📩 S'inscrire"}
           </button>
