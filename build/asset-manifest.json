@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2939d434.css",
+    "main.js": "/static/js/main.fa1f7df6.js",
+    "static/js/453.46283d40.chunk.js": "/static/js/453.46283d40.chunk.js",
+    "static/media/exterieur_2.jpg": "/static/media/exterieur_2.70cf07e59eefdde0bde2.jpg",
+    "static/media/exterieur_1.jpg": "/static/media/exterieur_1.9d11da098ff5cd763e8b.jpg",
+    "static/media/president.png": "/static/media/president.4a144a39ed3b2e8291d1.png",
+    "static/media/picture_2.jpg": "/static/media/picture_2.c554ddad0d64ba904c0a.jpg",
+    "static/media/salle_4.jpg": "/static/media/salle_4.fe9c3830851537e50dbe.jpg",
+    "static/media/salle_3.webp": "/static/media/salle_3.e236549f147ddf6a6186.webp",
+    "static/media/salle.webp": "/static/media/salle.673297169887236c3797.webp",
+    "static/media/coach_3.jpg": "/static/media/coach_3.d85b9cecd00a8e021329.jpg",
+    "static/media/coach_1.jpg": "/static/media/coach_1.c7b197ad8f7ae03eef78.jpg",
+    "static/media/picture_3.JPG": "/static/media/picture_3.4ae259a086f07b099c9e.JPG",
+    "static/media/coach_2.jpg": "/static/media/coach_2.ef63a1ee80c6888812f4.jpg",
+    "static/media/Licence-2025-MMA-1.webp": "/static/media/Licence-2025-MMA-1.cda02b3a38060d90f08e.webp",
+    "static/media/Licence-2025-MMA-2.webp": "/static/media/Licence-2025-MMA-2.11d3494fef2b64ac52d6.webp",
+    "static/media/Licence-2025-MMA-3.webp": "/static/media/Licence-2025-MMA-3.65c23d8207c17902b06d.webp",
+    "static/media/picture_1.jpeg": "/static/media/picture_1.3b9844d58225a7fad0aa.jpeg",
+    "static/media/salle_2.webp": "/static/media/salle_2.56ddffe15b69556743e8.webp",
+    "static/media/equipement.jpg": "/static/media/equipement.a066ea4fe11b663ad3a0.jpg",
+    "static/media/logo.jpg": "/static/media/logo.aa1e70b7f6e1483ed4f6.jpg",
+    "static/media/Ancienne_salle.jpg": "/static/media/Ancienne_salle.5d71dc91d6f8b5673cdb.jpg",
+    "static/media/FMMAF.webp": "/static/media/FMMAF.78e3906b68bae3396b43.webp",
+    "static/media/bon_gant_1.webp": "/static/media/bon_gant_1.3b6feb5399e89e1370b5.webp",
+    "static/media/bon_gant_2.webp": "/static/media/bon_gant_2.7a0353a675681f9f440f.webp",
+    "static/media/bad_gant_1.webp": "/static/media/bad_gant_1.f7d08eae569a3089ef89.webp",
+    "static/media/bad_gant_3.webp": "/static/media/bad_gant_3.eb1a9b0adf5070576d2f.webp",
+    "static/media/rouen.webp": "/static/media/rouen.9b8a486fdae5b0e3838b.webp",
+    "static/media/bon_gant_3.webp": "/static/media/bon_gant_3.9bf4580af3002e35d0b5.webp",
+    "static/media/bad_gant_2.webp": "/static/media/bad_gant_2.7555bd7b6951c7cd2eb9.webp",
+    "index.html": "/index.html",
+    "main.2939d434.css.map": "/static/css/main.2939d434.css.map",
+    "main.fa1f7df6.js.map": "/static/js/main.fa1f7df6.js.map",
+    "453.46283d40.chunk.js.map": "/static/js/453.46283d40.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2939d434.css",
+    "static/js/main.fa1f7df6.js"
+  ]
+}
