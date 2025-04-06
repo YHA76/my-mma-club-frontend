@@ -40,13 +40,12 @@ npm start
 ### Variables d'environnement
 
 - `REACT_APP_RECAPTCHA_SITE_KEY` : Clé publique reCAPTCHA
-- `REACT_APP_API_URL` : URL de l'API backend
 
 ### Structure du projet
 
 ```
 src/
-├── components/     # Composants réutilisables
+├── components/    # Composants réutilisables
 ├── views/         # Pages principales
 ├── styles/        # Fichiers CSS
 ├── assets/        # Images, fonts, etc.
