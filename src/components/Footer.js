@@ -108,7 +108,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2024 MMA Casbah Fight. Tous droits réservés.</p>
+        <p>&copy; 2025 MMA Casbah Fight. Tous droits réservés.</p>
         <p className="credits">Design et Développement par Benali Yahya</p>
       </div>
     </footer>
