@@ -239,7 +239,9 @@ function InscriptionForm() {
           </div>
 
           <div className="form-group">
+            <label htmlFor="photo">Photo</label>
             <input
+              id="photo"
               className="form-input"
               type="file"
               accept="image/*"
