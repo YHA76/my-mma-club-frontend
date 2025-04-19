@@ -13,7 +13,7 @@
 1. Clonez le repository :
 
 ```bash
-git clone https://github.com/votre-username/my-mma-club-frontend.git
+git clone https://github.com/YHA76/my-mma-club-frontend.git
 ```
 
 2. Installez les dépendances :
@@ -50,4 +50,12 @@ src/
 ├── styles/        # Fichiers CSS
 ├── assets/        # Images, fonts, etc.
 └── App.js         # Point d'entrée de l'application
+```
+
+## 🧪 Tests unitaires
+
+Pour exécuter les tests unitaires, utilisez la commande suivante :
+
+```bash
+npm test
 ```
