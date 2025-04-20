@@ -12,12 +12,14 @@ import ScrollToTop from "./components/ScrollToTop";
 import NotFound from "./views/NotFound";
 import MentionsLegales from "./views/legal/MentionsLegales.js";
 import PolitiqueConfidentialite from "./views/legal/PolitiqueConfidentialite";
+import CookieBanner from "./views/legal/CookieBanner";
 
 function App() {
   return (
     <ThemeProvider>
       <Router>
         <ScrollToTop />
+        <CookieBanner />
         {/* Le Router encapsule toutes les routes et le Navbar */}
         <Routes>
           <Route path="/" element={<Home />} />

@@ -1,0 +1,52 @@
+/* CookieBanner.css */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  box-sizing: border-box;
+  z-index: 10000;
+}
+
+.cookie-banner p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.cookie-banner p a {
+  color: #e11019;
+  text-decoration: underline;
+}
+
+.cookie-banner button {
+  background-color: #e11019;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin-left: 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .cookie-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 0.8rem;
+  }
+
+  .cookie-banner button {
+    margin: 0.6rem 0 0;
+  }
+}
