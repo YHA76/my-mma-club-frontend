@@ -248,7 +248,7 @@ function InscriptionForm() {
               required
             />
             <small className="form-help">
-              Formats acceptés : JPG, PNG, GIF. Taille maximale : 5MB
+              Formats acceptés : JPG, JPEG, PNG. Taille maximale : 5MB
             </small>
           </div>
 

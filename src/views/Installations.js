@@ -5,10 +5,10 @@ import Footer from "../components/Footer.js";
 import salleImage from "../assets/images/salle.webp";
 import salleImage2 from "../assets/images/salle_2.webp";
 import salleImage3 from "../assets/images/salle_3.webp";
-import salleImage4 from "../assets/images/salle_4.jpg";
-import equipements from "../assets/images/equipement.jpg";
-import exterieur from "../assets/images/exterieur_1.jpg";
-import exterieur2 from "../assets/images/exterieur_2.jpg";
+import salleImage4 from "../assets/images/salle_4.webp";
+import equipements from "../assets/images/equipement.webp";
+import exterieur from "../assets/images/exterieur_1.webp";
+import exterieur2 from "../assets/images/exterieur_2.webp";
 
 function Installations() {
   return (
