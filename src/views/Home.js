@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/NavBar";
+import Navbar from "../components/Navbar";
 import "../styles/Styles.css";
 import Footer from "../components/Footer.js";
 import logo from "../assets/images/logo.jpg";

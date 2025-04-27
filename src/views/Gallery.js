@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/NavBar";
+import Navbar from "../components/Navbar";
 import { motion } from "framer-motion"; // Importation de framer-motion pour l'animation
 import "../styles/Styles.css";
 import "../styles/Gallery.css";

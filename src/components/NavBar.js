@@ -12,7 +12,7 @@ import {
   faMoon,
 } from "@fortawesome/free-solid-svg-icons";
 import { useTheme } from "../context/ThemeContext";
-import "../styles/NavBar.css";
+import "../styles/components/Navbar.css";
 import logo from "../assets/images/logo.jpg";
 
 function Navbar() {

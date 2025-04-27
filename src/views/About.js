@@ -1,13 +1,13 @@
 import React from "react";
-import Navbar from "../components/NavBar";
+import Navbar from "../components/Navbar";
 import "../styles/About.css";
 import Footer from "../components/Footer.js";
-import coach1 from "../assets/images/coach_1.jpg";
-import coach2 from "../assets/images/coach_2.jpg";
-import coach3 from "../assets/images/coach_3.jpg";
-import president from "../assets/images/president.png";
+import coach1 from "../assets/images/coach_1.webp";
+import coach2 from "../assets/images/coach_2.webp";
+import coach3 from "../assets/images/coach_3.webp";
+import president from "../assets/images/president.webp";
 import after from "../assets/images/salle.webp";
-import before from "../assets/images/Ancienne_salle.jpg";
+import before from "../assets/images/Ancienne_salle.webp";
 
 function About() {
   const coachs = [
@@ -18,7 +18,7 @@ function About() {
     },
     {
       name: "Coach Lutte et MMA",
-      description: "7 fois champion de lutte en Thechenie",
+      description: "7 fois champion de lutte en Tchétchénie",
       picture: coach1,
     },
     {

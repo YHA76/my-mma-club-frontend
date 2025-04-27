@@ -8,7 +8,7 @@ import {
   Ghost,
   Instagram,
 } from "lucide-react";
-import "../styles/Footer.css";
+import "../styles/components/Footer.css";
 
 function Footer() {
   return (
@@ -108,7 +108,10 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2025 MMA Casbah Fight. Tous droits réservés.</p>
+        <p>
+          &copy; 2025 MMA Casbah Fight. Tous droits réservés{" "}
+          <Link to="/mentions-legales">Mentions légales.</Link>{" "}
+        </p>
         <p className="credits">Design et Développement par Benali Yahya</p>
       </div>
     </footer>

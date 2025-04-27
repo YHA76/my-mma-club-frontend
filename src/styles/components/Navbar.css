@@ -1,0 +1,183 @@
+.navbar {
+  background-color: #000000;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+}
+
+.navList {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.navItem {
+  margin: 0 8px;
+  position: relative;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+  padding: 1.2rem 1.8rem;
+  transition: all 0.3s ease;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  background-color: #e11019;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navLink:hover::after,
+.navLink.active::after {
+  width: 100%;
+}
+
+.navLink:hover,
+.navLink.active {
+  color: #e11019;
+  transform: translateY(-2px);
+}
+
+.socialIcons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.social-icon {
+  font-size: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.icon-hover:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.logo-image {
+  height: 50px; /* Ajustez la hauteur selon vos besoins */
+  width: auto; /* Conserve le ratio de l'image */
+  margin-right: 15px; /* Espace entre le logo et les autres éléments */
+  cursor: pointer; /* Change le curseur pour montrer que c'est cliquable */
+}
+/* Style du bouton dans la Navbar */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none; /* Pas de fond par défaut */
+  border: none; /* Pas de bordure */
+  cursor: pointer; /* Curseur interactif */
+  padding: 8px; /* Espacement interne */
+  border-radius: 50%; /* Forme arrondie */
+  transition: all 0.3s ease; /* Transition fluide */
+  color: white; /* Couleur du texte dans le thème actuel */
+}
+
+.dark-mode .theme-toggle {
+  color: var(--text-light); /* Contraste pour le mode sombre */
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Couleur de survol */
+}
+
+.theme-icon {
+  font-size: 1.5rem; /* Taille de l'icône */
+  transition: transform 0.3s ease; /* Transition fluide pour l'effet de mise en avant */
+}
+
+.theme-toggle:hover .theme-icon {
+  transform: scale(1.2); /* Légère mise en avant au survol */
+}
+
+@media (max-width: 968px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .navbar-container {
+    padding: 1.2rem;
+  }
+
+  .navList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #000000;
+    padding: 1.2rem 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .navList.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navItem {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navLink {
+    padding: 1.2rem;
+  }
+
+  .socialIcons {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .socialIcons {
+    gap: 1.2rem;
+  }
+
+  .social-icon {
+    font-size: 1.8rem;
+  }
+}

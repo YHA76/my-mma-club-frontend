@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../components/NavBar";
+import Navbar from "../components/Navbar";
 import Schedule from "../components/Schedule.tsx";
 import "../styles/Styles.css";
 import "../styles/Seances.css";
