@@ -128,16 +128,19 @@ function InscriptionForm() {
     formDataToSend.append("captchaToken", captchaToken);
 
     try {
-      const response = await fetch("http://localhost:5000/api/inscription", {
-        method: "POST",
-        body: formDataToSend,
-        onUploadProgress: (progressEvent) => {
-          const progress = Math.round(
-            (progressEvent.loaded * 100) / progressEvent.total
-          );
-          setUploadProgress(progress);
-        },
-      });
+      const response = await fetch(
+        "https://my-mma-club.onrender.com/api/inscription",
+        {
+          method: "POST",
+          body: formDataToSend,
+          onUploadProgress: (progressEvent) => {
+            const progress = Math.round(
+              (progressEvent.loaded * 100) / progressEvent.total
+            );
+            setUploadProgress(progress);
+          },
+        }
+      );
 
       if (!response.ok) {
         const errorData = await response.json();
