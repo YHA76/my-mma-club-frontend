@@ -212,6 +212,37 @@
 .dark-mode .progress-text {
   color: #999;
 }
+/* Style général pour la case à cocher et son label */
+.form-group label {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color 0.7s ease;
+}
+
+/* Style pour le mode sombre */
+.dark-mode .form-group label {
+  color: #f5f5f5;
+}
+
+/* Style pour le mode clair */
+.light-mode .form-group label {
+  color: #333333;
+}
+
+/* Style du texte d'information RGPD */
+.form-help {
+  display: block;
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 5px;
+}
+
+/* Mode sombre pour le texte d'information */
+.dark-mode .form-help {
+  color: #cccccc;
+}
 
 /* Media Queries */
 @media (max-width: 1024px) {

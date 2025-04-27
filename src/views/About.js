@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/NavBar";
+import Navbar from "../components/Navbar";
 import "../styles/About.css";
 import Footer from "../components/Footer.js";
 import coach1 from "../assets/images/coach_1.webp";

@@ -8,7 +8,7 @@ import {
   Ghost,
   Instagram,
 } from "lucide-react";
-import "../styles/Footer.css";
+import "../styles/components/Footer.css";
 
 function Footer() {
   return (

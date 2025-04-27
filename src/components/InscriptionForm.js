@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha"; // Import du reCAPTCHA
-import "../styles/InscriptionForm.css";
+import "../styles/components/InscriptionForm.css";
 import "../styles/Styles.css";
 
 function InscriptionForm() {
@@ -275,6 +275,29 @@ function InscriptionForm() {
               size="normal"
               theme="light"
             />
+          </div>
+          <div className="form-group">
+            <label>
+              <input
+                type="checkbox"
+                required
+                onChange={(e) => {
+                  if (!e.target.checked) {
+                    setMessage(
+                      "Vous devez accepter le traitement des données."
+                    );
+                  } else {
+                    setMessage("");
+                  }
+                }}
+              />
+              &nbsp;J’accepte que mes données soient traitées dans le cadre de
+              cette inscription.
+            </label>
+            <small className="form-help">
+              Vos données sont uniquement utilisées pour gérer votre inscription
+              au club et peuvent être conservées dans ce but.{" "}
+            </small>
           </div>
 
           {uploadProgress > 0 && uploadProgress < 100 && (
