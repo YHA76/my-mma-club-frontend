@@ -3,6 +3,8 @@ import ReCAPTCHA from "react-google-recaptcha"; // Import du reCAPTCHA
 import "../styles/components/InscriptionForm.css";
 import "../styles/Styles.css";
 
+const inscriptionsOuvertes = false; // Changer à true pour ouvrir les inscriptions
+
 function InscriptionForm() {
   const [formData, setFormData] = useState({
     nom: "",
@@ -168,6 +170,34 @@ function InscriptionForm() {
     }
   };
 
+  // Vue spéciale quand les inscriptions sont fermées
+  if (!inscriptionsOuvertes) {
+    return (
+      <div className="inscription-form-section">
+        <div className="inscription-form-container closed-inscription-container">
+          <h2 className="inscription-form-title closed-inscription-title">
+            Inscriptions fermées
+          </h2>
+
+          <p className="closed-inscription-subtext">
+            Les inscriptions sont actuellement suspendues.
+            <br />
+            Merci de revenir prochainement.
+          </p>
+
+          <button
+            className="submit-button closed-inscription-button"
+            type="button"
+            disabled
+          >
+            Inscriptions temporairement suspendues
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // 🔓 Vue normale (quand tu remettras inscriptionsOuvertes = true)
   return (
     <div className="inscription-form-section">
       <div className="inscription-form-container">
@@ -279,6 +309,7 @@ function InscriptionForm() {
               theme="light"
             />
           </div>
+
           <div className="form-group">
             <label>
               <input
@@ -299,7 +330,7 @@ function InscriptionForm() {
             </label>
             <small className="form-help">
               Vos données sont uniquement utilisées pour gérer votre inscription
-              au club et peuvent être conservées dans ce but.{" "}
+              au club et peuvent être conservées dans ce but.
             </small>
           </div>
 
@@ -320,7 +351,6 @@ function InscriptionForm() {
           </button>
         </form>
 
-        {/* Affichage du message de succès ou d'erreur */}
         {message && (
           <div
             className={`form-message ${
