@@ -6,7 +6,7 @@
 }
 
 .dark-mode .inscription-form-section {
-  background-color: #1a1a1a;
+  background-color: #111; /* un peu plus sombre, plus propre */
 }
 
 .inscription-form-container {
@@ -21,8 +21,8 @@
 }
 
 .dark-mode .inscription-form-container {
-  background: #2d2d2d;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: #1f1f1f; /* carte sombre propre */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 .inscription-form-title {
@@ -89,7 +89,7 @@
 }
 
 .form-input.error:focus {
-  box-shadow: 0 0 0 3px rgba(225, 16, 25, 0.2);
+  box-shadow: 0 0 0 3pxrgba(225, 16, 25, 0.2);
 }
 
 .submit-button {
@@ -119,10 +119,12 @@
 }
 
 .submit-button:disabled {
-  background: #cccccc;
+  background: #555; /* gris foncé au lieu de gris clair */
+  color: #aaa;
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
+  opacity: 0.7;
 }
 
 .form-message {
@@ -162,12 +164,12 @@
 .form-help {
   display: block;
   margin-top: 0.5rem;
-  color: #666;
+  color: #999;
   font-size: 0.85rem;
 }
 
 .dark-mode .form-help {
-  color: #999;
+  color: #cccccc;
 }
 
 .error-message {
@@ -212,7 +214,8 @@
 .dark-mode .progress-text {
   color: #999;
 }
-/* Style général pour la case à cocher et son label */
+
+/* Case à cocher RGPD */
 .form-group label {
   display: flex;
   align-items: center;
@@ -221,27 +224,37 @@
   transition: color 0.7s ease;
 }
 
-/* Style pour le mode sombre */
 .dark-mode .form-group label {
   color: #f5f5f5;
 }
 
-/* Style pour le mode clair */
 .light-mode .form-group label {
   color: #333333;
 }
 
-/* Style du texte d'information RGPD */
-.form-help {
-  display: block;
-  font-size: 0.8rem;
-  color: #999;
-  margin-top: 5px;
+/* === Styles spécifiques au bloc "Inscriptions fermées" === */
+
+.closed-inscription-container {
+  text-align: center;
 }
 
-/* Mode sombre pour le texte d'information */
-.dark-mode .form-help {
-  color: #cccccc;
+.closed-inscription-title {
+  margin-bottom: 1.5rem;
+}
+
+/* Texte sous "Inscriptions fermées" */
+.closed-inscription-subtext {
+  color: #555555;            /* plus sombre -> lisible sur fond blanc */
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+.dark-mode .closed-inscription-subtext {
+  color: #d0d0d0;            /* gris clair sur fond sombre */
+}
+
+.closed-inscription-button {
+  margin-top: 0;
 }
 
 /* Media Queries */

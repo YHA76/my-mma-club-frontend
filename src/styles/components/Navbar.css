@@ -75,7 +75,21 @@
   font-size: 3rem;
   transition: transform 0.3s ease;
 }
+.social-link-navbar {
+  color: white;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.social-link-navbar:hover {
+  color: #e11019; /* même rouge que le thème */
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
 .icon-hover:hover {
   transform: scale(1.2);
   filter: brightness(1.2);

@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faSquareSnapchat,
-  faSquareInstagram,
-} from "@fortawesome/free-brands-svg-icons";
+import { Ghost, Instagram } from "lucide-react";
 import {
   faBars,
   faTimes,
@@ -72,27 +69,18 @@ function Navbar() {
             href="https://www.snapchat.com/add/mmacasbahfight?invite_id=rCJkCARU&locale=fr_FR&share_id=RydhjjbpRVi0UUa33pOCGQ&sid=559b3f2fd9bc4ea0a21470a07e8e47f5"
             target="_blank"
             rel="noopener noreferrer"
-            className="social-icon"
+            className="social-link-navbar"
           >
-            <FontAwesomeIcon
-              icon={faSquareSnapchat}
-              beat
-              style={{ color: "#fffc00" }}
-              className="icon-hover"
-            />
+        <Ghost size={26} />
           </a>
+
           <a
-            href="https://www.instagram.com/mmacasbahfight/?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"
+            href="https://www.instagram.com/mmacasbahfight"
             target="_blank"
             rel="noopener noreferrer"
-            className="social-icon"
+            className="social-link-navbar"
           >
-            <FontAwesomeIcon
-              icon={faSquareInstagram}
-              beat
-              style={{ color: "#ff0285" }}
-              className="icon-hover"
-            />
+        <Instagram size={26} />
           </a>
         </div>
       </div>

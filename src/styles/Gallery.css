@@ -41,7 +41,7 @@
 }
 
 .gallery-item img {
-  width: 1500px; /* Taille fixe pour les écrans larges */
+  width: 95%; /* Taille fixe pour les écrans larges */
   height: 1000px;
   object-fit: cover; /* Garde les proportions sans déformation */
   border-radius: 10px; /* Coins arrondis */
